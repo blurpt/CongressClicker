@@ -73,6 +73,11 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
         investmentQuantities[investment.displayName]++;
     }
 
+    public void UpdateInvestmentPanel(Investment investment)
+    {
+
+    }
+
     public void ActivateAvalibleUpgrades()
     {
         foreach (KeyValuePair<int, UpgradeRequirement> key in InvestmentUpgradeRequirments)

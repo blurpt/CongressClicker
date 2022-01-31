@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    private int totalVoters;
+    private int voterCurrency, totalVoters;
     private float timer; 
     public int GetVoters()
+    {
+        return voterCurrency;
+    }
+    public int GetTotalVoters()
     {
         return totalVoters;
     }
     public bool CanPurchaseInvestment(int cost)
     {
-        return totalVoters > cost;
+        return voterCurrency > cost;
     }
+
+
 
     private void Start()
     {
-        PopulateContent();
+        UIManager.Instance.PopulateInvestments();
+        InvestmentsManager.Instance.PopulateUpgradeRequirements();
+        PlayerManager.Instance.Initialize();
+        UIManager.Instance.SetPlayerLevelUI(PlayerManager.Instance.GetCurrentPlayerLevel());
+        UIManager.Instance.UpdateVoterCount(voterCurrency);
     }
     private void Update()
     {
@@ -31,27 +41,23 @@ public class GameManager : Singleton<GameManager>
         {
             timer = 1;
             InvestmentsManager.Instance.ActivateAvalibleUpgrades();
+            PlayerManager.Instance.CheckForLevelUp(); 
         }
-    }
-
-    private void PopulateContent()
-    {
-        UIManager.Instance.PopulateInvestments();
-        InvestmentsManager.Instance.PopulateUpgradeRequirements();
     }
 
     public void AddVoters(int voters)
     {
-        totalVoters += voters;
-        UIManager.Instance.UpdateVoterCount(totalVoters);
+        voterCurrency += voters;
+        totalVoters += voters; 
+        UIManager.Instance.UpdateVoterCount(voterCurrency);
     }
 
     public void PurchaseInvestment(int cost)
     {
-        if (totalVoters < cost) return; 
+        if (voterCurrency < cost) return; 
 
-        totalVoters -= cost;
-        UIManager.Instance.UpdateVoterCount(totalVoters);
+        voterCurrency -= cost;
+        UIManager.Instance.UpdateVoterCount(voterCurrency);
     }
 
 

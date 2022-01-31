@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
-    public Text voterLable;
+    public Text voterLable, levelLable;
     public Transform investmentContainer; 
 
     public void UpdateVoterCount(int num)
@@ -15,6 +15,11 @@ public class UIManager : Singleton<UIManager>
     public void PopulateInvestments()
     {
         InvestmentsManager.Instance.SpawnInvestments(investmentContainer);
+    }
+
+    public void SetPlayerLevelUI(PlayerLevel playerLevel)
+    {
+        levelLable.text = "LvL " + PlayerManager.Instance.GetLevelFromPLD(playerLevel) + ": " + playerLevel.displayName; 
     }
 
     private string GetVotersLableText(int voters)
