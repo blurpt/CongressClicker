@@ -8,6 +8,7 @@ public class UIManager : Singleton<UIManager>
     public Text voterLable, levelLable;
     public Transform investmentContainer;
     public QuizPopUp quizPopUp;
+    public Slider promotionProgressBar; 
 
     public void UpdateVoterCount(int num)
     {
@@ -26,6 +27,11 @@ public class UIManager : Singleton<UIManager>
     public void StartQuiz(PlayerLevel playerLevel)
     {
         quizPopUp.Enable(playerLevel.quizQuestions, playerLevel.requiredQuizGrade); 
+    }
+
+    public void SetPromotionProgressBar(float progress)
+    {
+        promotionProgressBar.value = progress; 
     }
 
     private string GetVotersLableText(int voters)

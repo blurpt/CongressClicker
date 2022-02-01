@@ -14,6 +14,6 @@ public class UpgradeRequirement
 
     public bool CanAfford(Investment Investment)
     {
-        return GameManager.Instance.GetVoters() >= cost && InvestmentsManager.Instance.GetInvestmentQuantity(Investment) >= quantityRequirement; 
+        return GameManager.Instance.GetVoterCurrency() >= cost && InvestmentsManager.Instance.GetInvestmentQuantity(Investment) >= quantityRequirement; 
     }
 }

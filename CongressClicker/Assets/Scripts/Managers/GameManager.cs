@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager>
     private int voterCurrency, totalVoters;
     private float timer;
     private bool paused; 
-    public int GetVoters()
+    public int GetVoterCurrency()
     {
         return voterCurrency;
     }
@@ -38,6 +38,8 @@ public class GameManager : Singleton<GameManager>
         {
             button.CacheTimer();
         }
+
+        UIManager.Instance.SetPromotionProgressBar(PlayerManager.Instance.PromotionProgressPercent());
 
         timer -= Time.deltaTime;
         if (timer < 0)

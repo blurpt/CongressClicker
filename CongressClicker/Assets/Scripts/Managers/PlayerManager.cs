@@ -30,6 +30,13 @@ public class PlayerManager : Singleton<PlayerManager>
         return currentLevel; 
     }
 
+    public float PromotionProgressPercent()
+    {
+        int minVoters = currentLevel.voterRequirement;
+        int maxVoters = GetNextLevel().voterRequirement;
+        return Mathf.InverseLerp(minVoters, maxVoters, GameManager.Instance.GetTotalVoters()); 
+    }
+
     public void CheckForLevelUp()
     {
         if (currentLevel == maxLevel) return;
@@ -37,6 +44,7 @@ public class PlayerManager : Singleton<PlayerManager>
         {
             GameManager.Instance.StartQuiz(GetNextLevel());
         }
+
     }
 
     public void Promote()
