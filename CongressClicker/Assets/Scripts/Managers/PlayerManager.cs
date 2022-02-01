@@ -35,11 +35,11 @@ public class PlayerManager : Singleton<PlayerManager>
         if (currentLevel == maxLevel) return;
         if (GameManager.Instance.GetTotalVoters() >= GetNextLevel().voterRequirement)
         {
-            LevelUp();
+            GameManager.Instance.StartQuiz(GetNextLevel());
         }
     }
 
-    private void LevelUp()
+    public void Promote()
     {
         currentLevel = GetNextLevel();
         UIManager.Instance.SetPlayerLevelUI(currentLevel);

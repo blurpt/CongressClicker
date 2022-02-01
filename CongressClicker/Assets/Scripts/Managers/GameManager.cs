@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     private int voterCurrency, totalVoters;
-    private float timer; 
+    private float timer;
+    private bool paused; 
     public int GetVoters()
     {
         return voterCurrency;
@@ -31,6 +32,8 @@ public class GameManager : Singleton<GameManager>
     }
     private void Update()
     {
+        if (paused) return; 
+
         foreach(InvestmentButton button in InvestmentsManager.Instance.GetInvestmentButtons())
         {
             button.CacheTimer();
@@ -58,6 +61,32 @@ public class GameManager : Singleton<GameManager>
 
         voterCurrency -= cost;
         UIManager.Instance.UpdateVoterCount(voterCurrency);
+    }
+
+    public void StartQuiz(PlayerLevel level)
+    {
+        paused = true;
+        UIManager.Instance.StartQuiz(level);
+    }
+
+    public void EndQuiz(bool passed)
+    {
+        paused = false;
+        int voterPercent = Mathf.RoundToInt(voterCurrency * .25f);
+        if(passed)
+        {
+            totalVoters += voterPercent;
+            voterCurrency += voterPercent;
+            PlayerManager.Instance.Promote(); 
+        }
+        else
+        {
+            totalVoters -= voterPercent;
+            voterCurrency -= voterPercent;
+        }
+
+        UIManager.Instance.UpdateVoterCount(voterCurrency);
+
     }
 
 

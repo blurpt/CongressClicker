@@ -12,8 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6955f31d5a209e9439dca291941e99a9, type: 3}
   m_Name: Theif
   m_EditorClassIdentifier: 
-  displayName: 
-  level: 0
+  displayName: Theif
   playerAvatar: {fileID: 0}
-  voterRequirement: 0
-  quizQuestions: []
+  voterRequirement: 10
+  quizQuestions:
+  - question: the first one?
+    answers:
+    - first
+    - second
+    - third
+    answerIndex: 0
+  - question: the second one?
+    answers:
+    - first
+    - second
+    - third
+    answerIndex: 1
+  - question: 'the thrid one? '
+    answers:
+    - first
+    - second
+    - third
+    answerIndex: 2
+  requiredQuizGrade: 0.6

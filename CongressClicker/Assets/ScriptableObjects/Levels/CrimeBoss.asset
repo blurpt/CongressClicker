@@ -14,5 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Crime Boss
   playerAvatar: {fileID: 0}
-  voterRequirement: 0
-  quizQuestions: []
+  voterRequirement: 20
+  quizQuestions:
+  - question: one?
+    answers:
+    - first
+    - second
+    - third
+    answerIndex: 0
+  - question: second?
+    answers:
+    - first
+    - second
+    - third
+    answerIndex: 1
+  - question: 'third? '
+    answers:
+    - first
+    - second
+    - third
+    answerIndex: 2
+  requiredQuizGrade: 1

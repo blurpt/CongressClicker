@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class UIManager : Singleton<UIManager>
 {
     public Text voterLable, levelLable;
-    public Transform investmentContainer; 
+    public Transform investmentContainer;
+    public QuizPopUp quizPopUp;
 
     public void UpdateVoterCount(int num)
     {
@@ -19,7 +20,12 @@ public class UIManager : Singleton<UIManager>
 
     public void SetPlayerLevelUI(PlayerLevel playerLevel)
     {
-        levelLable.text = "LvL " + PlayerManager.Instance.GetLevelFromPLD(playerLevel) + ": " + playerLevel.displayName; 
+        levelLable.text = "LvL" + PlayerManager.Instance.GetLevelFromPLD(playerLevel) + ": " + playerLevel.displayName; 
+    }
+
+    public void StartQuiz(PlayerLevel playerLevel)
+    {
+        quizPopUp.Enable(playerLevel.quizQuestions, playerLevel.requiredQuizGrade); 
     }
 
     private string GetVotersLableText(int voters)
