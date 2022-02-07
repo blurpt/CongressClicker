@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6955f31d5a209e9439dca291941e99a9, type: 3}
+  m_Name: Senator
+  m_EditorClassIdentifier: 
+  displayName: Senator
+  playerAvatar: {fileID: 0}
+  voterRequirement: 700
+  quizQuestions:
+  - question: How many senators does each state have?
+    answers:
+    - 1
+    - 2
+    - 3
+    - 525,600
+    answerIndex: 1
+  - question: 'How many votes are needed in the House of Representatives for a bill
+      to move on to the Senate?  '
+    answers:
+    - 218
+    - 117
+    - 80
+    - '3.14159265358979323846264338327950288  '
+    answerIndex: 0
+  - question: 'How many committees are a part of the Senate?  '
+    answers:
+    - 5
+    - 10
+    - 15
+    - 20
+    answerIndex: 3
+  - question: 'What is an example of a Senate Committee?  '
+    answers:
+    - 'Committee of Homeland Security and Governmental Affairs  '
+    - Committee of Dance Parties
+    - Committee of Toothpaste
+    - Committee of Bubble Tea
+    answerIndex: 0
+  requiredQuizGrade: 1

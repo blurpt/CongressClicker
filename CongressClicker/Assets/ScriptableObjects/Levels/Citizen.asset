@@ -16,3 +16,4 @@ MonoBehaviour:
   playerAvatar: {fileID: 0}
   voterRequirement: 0
   quizQuestions: []
+  requiredQuizGrade: 1

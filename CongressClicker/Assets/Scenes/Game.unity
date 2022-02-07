@@ -427,7 +427,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Election Night Debate! '
+  m_Text: ' Get these questions right to gain voters and earn a promotion!'
 --- !u!222 &56259458
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -704,7 +704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -245, y: -0.00018662469}
+  m_AnchoredPosition: {x: -245, y: 0.000030517578}
   m_SizeDelta: {x: 490, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242084657
@@ -726,7 +726,7 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 1
   m_StartCorner: 0
-  m_StartAxis: 0
+  m_StartAxis: 1
   m_CellSize: {x: 421.4, y: 145.53}
   m_Spacing: {x: 0, y: 15.2}
   m_Constraint: 0
@@ -844,15 +844,16 @@ MonoBehaviour:
   investments:
   - {fileID: 11400000, guid: 6a4230b8b8240004aa4a7b6c9c316202, type: 2}
   - {fileID: 11400000, guid: 6f9a27be90676b8408161e40f6a4562f, type: 2}
-  - {fileID: 11400000, guid: 928cb237cefa1ac4db3a83e8ac43bffa, type: 2}
-  - {fileID: 11400000, guid: de83b01db2468084a86990f060f41d92, type: 2}
+  - {fileID: 11400000, guid: cde57e1ecf39b0343b858eb012cecf31, type: 2}
   - {fileID: 11400000, guid: a729ba826a77ac045b11360e14b21cfa, type: 2}
+  - {fileID: 11400000, guid: de83b01db2468084a86990f060f41d92, type: 2}
+  - {fileID: 11400000, guid: 928cb237cefa1ac4db3a83e8ac43bffa, type: 2}
   - {fileID: 11400000, guid: 4a1b48532ad596042941a20e059c9a81, type: 2}
   - {fileID: 11400000, guid: 98a344dbb202a1b4f848dfe6a40e0b57, type: 2}
-  - {fileID: 11400000, guid: cde57e1ecf39b0343b858eb012cecf31, type: 2}
   investmentPrefab: {fileID: 8437965521055256096, guid: 97e4f7b0464210a4a8be7c35e2caddad, type: 3}
   upgradePrefab: {fileID: 1795477402694552607, guid: 95c5d10fa5b0de649b25e547ccf882b9, type: 3}
   upgradeContainer: {fileID: 442300840}
+  scrollbar: {fileID: 1671998200}
 --- !u!114 &273098883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,7 +886,14 @@ MonoBehaviour:
   playerLevels:
   - {fileID: 11400000, guid: 1df02f27dc78cb546abde8c07fda507b, type: 2}
   - {fileID: 11400000, guid: 21fe9adf5b15c814696b256b8699668f, type: 2}
-  - {fileID: 11400000, guid: a05832bfcdfb3ef479edbe3187b8cd48, type: 2}
+  - {fileID: 11400000, guid: 936260554e8f6464cb608415a6b834b8, type: 2}
+  - {fileID: 11400000, guid: ddff0a5f9ddcc9d40b526eb7cf600487, type: 2}
+  - {fileID: 11400000, guid: 9196e8fce46599b41af10274ea9b4d1b, type: 2}
+  - {fileID: 11400000, guid: cb28ad1452786874f9f6dbfe80a1391c, type: 2}
+  - {fileID: 11400000, guid: 46831e5f061d47a4398eae0f0b763fa9, type: 2}
+  - {fileID: 11400000, guid: d47e7f4deb904aa46bfb20d3ecb3d7e9, type: 2}
+  - {fileID: 11400000, guid: 7a85047101d0ba34dbde8ed4eaba6f6b, type: 2}
+  - {fileID: 11400000, guid: a79cb93b5e9404448a18d4f62a14db77, type: 2}
 --- !u!1 &345915847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3741,7 +3749,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1094374972}
   m_HandleRect: {fileID: 1094374971}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

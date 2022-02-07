@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6955f31d5a209e9439dca291941e99a9, type: 3}
+  m_Name: President
+  m_EditorClassIdentifier: 
+  displayName: President
+  playerAvatar: {fileID: 0}
+  voterRequirement: 1100
+  quizQuestions:
+  - question: How many branches of government are there?
+    answers:
+    - 5
+    - 4
+    - 3
+    - 2
+    answerIndex: 2
+  - question: What kind of government does the United States have?
+    answers:
+    - Democratic Republic
+    - Democracy
+    - Republic
+    - Monarchy
+    answerIndex: 0
+  - question: How many Electoral College points do you need to win the presidency?
+    answers:
+    - 270
+    - 300
+    - 350
+    - 250
+    answerIndex: 0
+  requiredQuizGrade: 1

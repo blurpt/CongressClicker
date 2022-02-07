@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4231d7d289452141b8ea87c548a38f9, type: 3}
+  m_Name: Merch
+  m_EditorClassIdentifier: 
+  displayName: Merch
+  unlockLevel: 1
+  startingCost: 75
+  votesPerCache: 5
+  secondsToCache: 5
+  buttonIcon: {fileID: 0}
+  upgradeRequirements:
+  - displayName: 
+    ID: 140
+    quantityRequirement: 10
+    cost: 0
+    description: 
+    icon: {fileID: 0}
+  - displayName: 
+    ID: 141
+    quantityRequirement: 50
+    cost: 0
+    description: 
+    icon: {fileID: 0}
+  - displayName: 
+    ID: 142
+    quantityRequirement: 100
+    cost: 0
+    description: 
+    icon: {fileID: 0}
+  feedbackPanel_Background: {fileID: 0}
+  feedbackPanel_ObjectsToPopulate: []

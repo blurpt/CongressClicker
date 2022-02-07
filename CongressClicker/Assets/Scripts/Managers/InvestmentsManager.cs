@@ -1,13 +1,15 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 public class InvestmentsManager : Singleton<InvestmentsManager>
 {
     public Investment[] investments;
     public GameObject investmentPrefab, upgradePrefab;
-    public Transform upgradeContainer; 
+    public Transform upgradeContainer;
+    public Scrollbar scrollbar;
     private List<InvestmentButton> investmentButtons = new List<InvestmentButton>();
     private Dictionary<string, int> investmentQuantities = new Dictionary<string, int>();
     private Dictionary<int, UpgradeRequirement> InvestmentUpgradeRequirments = new Dictionary<int, UpgradeRequirement>();
@@ -54,6 +56,8 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
             investmentQuantities.Add(investment.displayName, 0);
             investmentButtons.Add(button);
         }
+
+        scrollbar.value = 1;
     }
 
     public void PopulateUpgradeRequirements()
