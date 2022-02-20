@@ -10,5 +10,5 @@ public class PlayerLevel : ScriptableObject
     public Image playerAvatar;
     public int voterRequirement;
     public QuizQuestion[] quizQuestions;
-    public float requiredQuizGrade; 
+    public float requiredQuizGrade;
 }

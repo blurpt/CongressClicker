@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class QuizPopUp : MonoBehaviour
 {
-    public Text questionText;
-    public Transform popUp, answerParent, qustionMarkerParent, submitButton, closeButton; 
+    public Text questionText, voterBonusText;
+    public Transform popUp, answerParent, qustionMarkerParent, submitButton, closeButton, voterBonusParent; 
     public GameObject answerPrefab, questionMarkerPrefab;
     public ToggleGroup answerToggleGroup;
     private string quizPassedText = "Debate Won!";
@@ -17,6 +17,13 @@ public class QuizPopUp : MonoBehaviour
     
     public void SubmitAnswer()
     {
+        submitButton.gameObject.SetActive(false);
+        StartCoroutine("InternalSubmitAnswer"); 
+    }
+
+    private IEnumerator InternalSubmitAnswer()
+    {
+
         if (answerToggleGroup.GetFirstActiveToggle().GetComponentInParent<AnswerLabel>().GetCorrectAnswer())
         {
             CorrectAnswer();
@@ -26,7 +33,8 @@ public class QuizPopUp : MonoBehaviour
             IncorrectAnswer();
         }
 
-        NextQuestion(); 
+        yield return new WaitForSeconds(2);
+        NextQuestion();
     }
 
     public void Enable(QuizQuestion[] quizQuestions, float RequiredGrade)
@@ -52,6 +60,7 @@ public class QuizPopUp : MonoBehaviour
     private void Clear()
     {
         questionText.text = "";
+        voterBonusParent.gameObject.SetActive(false);
         foreach(RectTransform child in answerParent)
         {
             child.gameObject.SetActive(false);
@@ -76,6 +85,8 @@ public class QuizPopUp : MonoBehaviour
 
     private void CorrectAnswer()
     {
+        GameManager.Instance.AddVoters(10); 
+        voterBonusParent.gameObject.SetActive(true);
         correctAnswers++; 
         print("correct!");
     }
@@ -95,6 +106,7 @@ public class QuizPopUp : MonoBehaviour
 
         currentQuizQuestionIndex++;
         PopulateQuestion(questions[currentQuizQuestionIndex]);
+        submitButton.gameObject.SetActive(true);
     }
 
     private void QuizCompleted()
