@@ -38,4 +38,9 @@ MonoBehaviour:
     description: 
     icon: {fileID: 0}
   feedbackPanel_Background: {fileID: 0}
-  feedbackPanel_ObjectsToPopulate: []
+  feedbackPanel_ObjectsToPopulate:
+  - {fileID: 21300000, guid: e1869bd34b37698469e590fb6415e17a, type: 3}
+  - {fileID: 21300000, guid: fc1dd8f4bd13b6145917a33f028703e0, type: 3}
+  noiseMin: 10
+  noiseMax: 10
+  spawnType: 2

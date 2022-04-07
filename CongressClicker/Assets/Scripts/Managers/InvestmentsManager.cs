@@ -7,13 +7,15 @@ using UnityEngine.UI;
 public class InvestmentsManager : Singleton<InvestmentsManager>
 {
     public Investment[] investments;
-    public GameObject investmentPrefab, upgradePrefab;
-    public Transform upgradeContainer;
+    public GameObject investmentPrefab, upgradePrefab, investmentPanelPrefab;
+    public Transform upgradeContainer, displayContainer;
     public Scrollbar scrollbar;
     private List<InvestmentButton> investmentButtons = new List<InvestmentButton>();
     private Dictionary<string, int> investmentQuantities = new Dictionary<string, int>();
     private Dictionary<int, UpgradeRequirement> InvestmentUpgradeRequirments = new Dictionary<int, UpgradeRequirement>();
     private Dictionary<int, Investment> UpgradeInvestment = new Dictionary<int, Investment>();
+    private Dictionary<Investment, InvestmentPanel> InvestmentPanels = new Dictionary<Investment, InvestmentPanel>();
+
     private List<int> purchasedUpgradeIDs = new List<int>();
     private List<int> spawnedUpgradeIDs = new List<int>();
 
@@ -79,7 +81,15 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
 
     public void UpdateInvestmentPanel(Investment investment)
     {
+        if(!InvestmentPanels.ContainsKey(investment))
+        {
+            InvestmentPanel investmentPanel = Instantiate(investmentPanelPrefab, displayContainer).GetComponent<InvestmentPanel>();
+            investmentPanel.PopulateInvestmentPanel(investment);
+            InvestmentPanels.Add(investment, investmentPanel);
+            print("adding the thing");
+        }
 
+        InvestmentPanels[investment].AddInvestment(); 
     }
 
     public void ActivateAvalibleUpgrades()

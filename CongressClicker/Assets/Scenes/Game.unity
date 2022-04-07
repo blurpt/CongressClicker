@@ -852,7 +852,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 98a344dbb202a1b4f848dfe6a40e0b57, type: 2}
   investmentPrefab: {fileID: 8437965521055256096, guid: 97e4f7b0464210a4a8be7c35e2caddad, type: 3}
   upgradePrefab: {fileID: 1795477402694552607, guid: 95c5d10fa5b0de649b25e547ccf882b9, type: 3}
+  investmentPanelPrefab: {fileID: 7229423146297978896, guid: e10f21ef51ba91544a962bb1cf0576b5, type: 3}
   upgradeContainer: {fileID: 442300840}
+  displayContainer: {fileID: 836239026}
   scrollbar: {fileID: 1671998200}
 --- !u!114 &273098883
 MonoBehaviour:
@@ -2026,7 +2028,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1491363502}
   m_HandleRect: {fileID: 1491363501}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

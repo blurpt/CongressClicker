@@ -13,6 +13,14 @@ public class Investment : ScriptableObject
     public float secondsToCache; 
     public Image buttonIcon;
     public UpgradeRequirement[] upgradeRequirements;
-    public Image feedbackPanel_Background;
-    public Image[] feedbackPanel_ObjectsToPopulate;
+    public Sprite feedbackPanel_Background;
+    public Sprite[] feedbackPanel_ObjectsToPopulate;
+    public int noiseMin, noiseMax;
+    public enum SpawnType { column, row, singleRow };
+    public SpawnType spawnType;
+
+    public Sprite GetIcon()
+    {
+        return feedbackPanel_ObjectsToPopulate[Random.Range(0, feedbackPanel_ObjectsToPopulate.Length)];   
+    }
 }
