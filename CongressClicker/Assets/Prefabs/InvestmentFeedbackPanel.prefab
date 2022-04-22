@@ -221,7 +221,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 50, y: 50}
-  m_Spacing: {x: 2, y: 2}
+  m_Spacing: {x: 0, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 5
 --- !u!114 &1982284909
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 50, y: 50}
-  m_Spacing: {x: 2, y: 2}
+  m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 11
 --- !u!114 &5371307499661923912
@@ -644,9 +644,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc063f5be8c76cb4584dc5b2451d6384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columnContainer: {fileID: 1982284908}
-  rowContainer: {fileID: 8909387661475505200}
-  singleRowContainer: {fileID: 8459127035584781322}
+  columnContainer: {fileID: 1982284910}
+  rowContainer: {fileID: 8916057249848869386}
+  singleRowContainer: {fileID: 6672177444809029536}
   backgroundImage: {fileID: 1876904916}
   iconPrefab: {fileID: 8499317552948380290, guid: e227174952abd954595ad1805fa0f10f, type: 3}
   scrollRect: {fileID: 1876904915}
@@ -747,8 +747,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 50, y: 50}
-  m_Spacing: {x: 2, y: 2}
+  m_CellSize: {x: 93.87, y: 112.4}
+  m_Spacing: {x: 0, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
 --- !u!114 &8792810907918142498

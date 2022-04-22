@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    public bool pauseLeveling;
     private int voterCurrency, totalVoters;
     private float timer;
     private bool paused; 
@@ -17,10 +18,8 @@ public class GameManager : Singleton<GameManager>
     }
     public bool CanPurchaseInvestment(int cost)
     {
-        return voterCurrency > cost;
+        return voterCurrency >= cost;
     }
-
-
 
     private void Start()
     {
@@ -46,7 +45,10 @@ public class GameManager : Singleton<GameManager>
         {
             timer = 1;
             InvestmentsManager.Instance.ActivateAvalibleUpgrades();
-            PlayerManager.Instance.CheckForLevelUp(); 
+            if(!pauseLeveling)
+            {
+                PlayerManager.Instance.CheckForLevelUp();
+            }
         }
     }
 
@@ -59,7 +61,7 @@ public class GameManager : Singleton<GameManager>
 
     public void PurchaseInvestment(int cost)
     {
-        if (voterCurrency < cost) return; 
+        if (voterCurrency <= cost) return; 
 
         voterCurrency -= cost;
         UIManager.Instance.UpdateVoterCount(voterCurrency);

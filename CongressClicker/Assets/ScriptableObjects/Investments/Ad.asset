@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4231d7d289452141b8ea87c548a38f9, type: 3}
+  m_Name: Ad
+  m_EditorClassIdentifier: 
+  displayName: Ad
+  unlockLevel: 1
+  startingCost: 1
+  votesPerCache: 2
+  secondsToCache: 10
+  buttonIcon: {fileID: 0}
+  upgradeRequirements:
+  - displayName: 
+    ID: 110
+    quantityRequirement: 10
+    cost: 0
+    description: 
+    icon: {fileID: 0}
+  - displayName: 
+    ID: 111
+    quantityRequirement: 50
+    cost: 0
+    description: 
+    icon: {fileID: 0}
+  - displayName: 
+    ID: 112
+    quantityRequirement: 100
+    cost: 0
+    description: 
+    icon: {fileID: 0}
+  feedbackPanel_Background: {fileID: 21300000, guid: c539325cd2f38f34ba6ffa791424a7ac, type: 3}
+  feedbackPanel_ObjectsToPopulate:
+  - {fileID: 21300000, guid: a5fe8d79ca2b9f3429dfa4b052a56f04, type: 3}
+  noiseMin: 3
+  noiseMax: 3
+  cellSize: {x: 300, y: 300}
+  offSet: {x: 0, y: -20}
+  spawnType: 2

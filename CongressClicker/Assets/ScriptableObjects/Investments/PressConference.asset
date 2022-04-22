@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Press Conference
   unlockLevel: 2
-  startingCost: 450
+  startingCost: 1
   votesPerCache: 50
   secondsToCache: 1
   buttonIcon: {fileID: 0}
@@ -37,10 +37,12 @@ MonoBehaviour:
     cost: 0
     description: 
     icon: {fileID: 0}
-  feedbackPanel_Background: {fileID: 0}
+  feedbackPanel_Background: {fileID: 21300000, guid: f15e5979712fc2e4a9046cb28d214e83, type: 3}
   feedbackPanel_ObjectsToPopulate:
   - {fileID: 21300000, guid: e1869bd34b37698469e590fb6415e17a, type: 3}
   - {fileID: 21300000, guid: fc1dd8f4bd13b6145917a33f028703e0, type: 3}
   noiseMin: 0
   noiseMax: 0
+  cellSize: {x: 100, y: 100}
+  offSet: {x: 0, y: -20}
   spawnType: 1

@@ -815,6 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570cc413e86901b4e81189aa9130f366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseLeveling: 1
 --- !u!4 &273098881
 Transform:
   m_ObjectHideFlags: 0
@@ -2028,7 +2029,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1491363502}
   m_HandleRect: {fileID: 1491363501}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
