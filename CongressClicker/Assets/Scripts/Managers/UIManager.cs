@@ -8,7 +8,10 @@ public class UIManager : Singleton<UIManager>
     public Text voterLable, levelLable;
     public Transform investmentContainer;
     public QuizPopUp quizPopUp;
-    public Slider promotionProgressBar; 
+    public MerchPopUp merchPopUp;
+    public Slider promotionProgressBar;
+    public Image portrait;
+
 
     public void UpdateVoterCount(int num)
     {
@@ -17,6 +20,11 @@ public class UIManager : Singleton<UIManager>
     public void PopulateInvestments()
     {
         InvestmentsManager.Instance.SpawnInvestments(investmentContainer);
+    }
+
+    public void PopulateMerch()
+    {
+        merchPopUp.Populate();
     }
 
     public void SetPlayerLevelUI(PlayerLevel playerLevel)
@@ -32,6 +40,11 @@ public class UIManager : Singleton<UIManager>
     public void SetPromotionProgressBar(float progress)
     {
         promotionProgressBar.value = progress; 
+    }
+
+    public void UpdatePortrait(Sprite icon)
+    {
+        portrait.sprite = icon; 
     }
 
     private string GetVotersLableText(int voters)

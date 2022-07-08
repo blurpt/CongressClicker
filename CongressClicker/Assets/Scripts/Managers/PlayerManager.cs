@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
     public PlayerLevel[] playerLevels;
     private Dictionary<PlayerLevel, int> PLDataToLevel = new Dictionary<PlayerLevel, int>();
     private Dictionary<int, PlayerLevel> LevelToPLD = new Dictionary<int, PlayerLevel>();
-    private PlayerLevel currentLevel, maxLevel; 
+    private PlayerLevel currentLevel, maxLevel;
+    private int merchIndex;
 
     public void Initialize()
     {
@@ -17,7 +19,7 @@ public class PlayerManager : Singleton<PlayerManager>
             LevelToPLD.Add(i, playerLevels[i]); 
             maxLevel = playerLevels[i];
         }
-        currentLevel = LevelToPLD[0]; 
+        currentLevel = LevelToPLD[0];
     }
 
     public int GetLevelFromPLD(PlayerLevel playerLevel)
@@ -52,6 +54,17 @@ public class PlayerManager : Singleton<PlayerManager>
         currentLevel = GetNextLevel();
         UIManager.Instance.SetPlayerLevelUI(currentLevel);
     }
+
+    public void SetMerchIndex(int index)
+    {
+        merchIndex = index;
+    }
+
+    public int GetMerchIndex()
+    {
+        return merchIndex; 
+    }
+
     private PlayerLevel GetNextLevel()
     {
         if (currentLevel == maxLevel) return maxLevel;

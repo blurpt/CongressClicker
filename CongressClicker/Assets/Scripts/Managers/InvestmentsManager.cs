@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class InvestmentsManager : Singleton<InvestmentsManager>
 {
     public Investment[] investments;
+    public MerchSet[] merch; 
     public GameObject investmentPrefab, upgradePrefab, investmentPanelPrefab;
     public Transform upgradeContainer, displayContainer;
     public Scrollbar scrollbar;
@@ -15,6 +16,7 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
     private Dictionary<int, UpgradeRequirement> InvestmentUpgradeRequirments = new Dictionary<int, UpgradeRequirement>();
     private Dictionary<int, Investment> UpgradeInvestment = new Dictionary<int, Investment>();
     private Dictionary<Investment, InvestmentPanel> InvestmentPanels = new Dictionary<Investment, InvestmentPanel>();
+    private Dictionary<int, MerchSet> merchSets = new Dictionary<int, MerchSet>();
 
     private List<int> purchasedUpgradeIDs = new List<int>();
     private List<int> spawnedUpgradeIDs = new List<int>();
@@ -72,6 +74,27 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
                 UpgradeInvestment.Add(upgradRequirment.ID, button.GetInvestment());
             }
         }
+    }
+
+    public void PopulateMerchSelection()
+    {
+        for(int i = 0; i < merch.Length; i++)
+        {
+            merchSets.Add(i, merch[i]); 
+        }
+
+        UIManager.Instance.PopulateMerch();
+    }
+
+    public Sprite GetMerchInvestmentIcon(int index)
+    {
+        return merchSets[index].investmentIcon;
+    }
+
+    public void UpdateMerchSelection(int index)
+    {
+        UIManager.Instance.UpdatePortrait(merchSets[index].portriatIcon);
+        PlayerManager.Instance.SetMerchIndex(index);
     }
 
     public void IncreaseInvestment(Investment investment)

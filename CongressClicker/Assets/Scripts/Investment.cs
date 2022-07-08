@@ -21,7 +21,7 @@ public class Investment : ScriptableObject
     public enum SpawnType { column, row, singleRow };
     public SpawnType spawnType;
 
-    public Sprite GetIcon()
+    public virtual Sprite GetIcon()
     {
         return feedbackPanel_ObjectsToPopulate[Random.Range(0, feedbackPanel_ObjectsToPopulate.Length)];   
     }

@@ -43,6 +43,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fc1dd8f4bd13b6145917a33f028703e0, type: 3}
   noiseMin: 0
   noiseMax: 0
-  cellSize: {x: 300, y: 300}
+  cellSize: {x: 350, y: 350}
   offSet: {x: 0, y: -20}
   spawnType: 2

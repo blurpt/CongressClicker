@@ -49,13 +49,10 @@ public class InvestmentPanel : MonoBehaviour
         {
             case Investment.SpawnType.column:
                 return columnContainer;
-                break;
             case Investment.SpawnType.row:
                 return rowContainer;
-                break;
             case Investment.SpawnType.singleRow:
                 return singleRowContainer;
-                break;
         }
         return columnContainer;
 

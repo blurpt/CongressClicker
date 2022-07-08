@@ -25,6 +25,7 @@ public class GameManager : Singleton<GameManager>
     {
         UIManager.Instance.PopulateInvestments();
         InvestmentsManager.Instance.PopulateUpgradeRequirements();
+        InvestmentsManager.Instance.PopulateMerchSelection();
         PlayerManager.Instance.Initialize();
         UIManager.Instance.SetPlayerLevelUI(PlayerManager.Instance.GetCurrentPlayerLevel());
         UIManager.Instance.UpdateVoterCount(voterCurrency);
