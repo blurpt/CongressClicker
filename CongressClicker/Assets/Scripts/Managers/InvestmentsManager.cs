@@ -84,6 +84,7 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
         }
 
         UIManager.Instance.PopulateMerch();
+        UpdateMerchSelection(0);
     }
 
     public Sprite GetMerchInvestmentIcon(int index)
