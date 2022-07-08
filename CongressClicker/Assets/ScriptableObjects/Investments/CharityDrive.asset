@@ -15,8 +15,8 @@ MonoBehaviour:
   displayName: CharityDrive
   unlockLevel: 4
   startingCost: 1
-  votesPerCache: 1000
-  secondsToCache: 1
+  votesPerCache: 1
+  secondsToCache: 100
   buttonIcon: {fileID: 0}
   upgradeRequirements:
   - displayName: 
@@ -37,10 +37,12 @@ MonoBehaviour:
     cost: 0
     description: 
     icon: {fileID: 0}
-  feedbackPanel_Background: {fileID: 21300000, guid: f15e5979712fc2e4a9046cb28d214e83, type: 3}
+  feedbackPanel_Background: {fileID: 21300000, guid: d63ec77e430658843b756ee2c3266827, type: 3}
   feedbackPanel_ObjectsToPopulate:
-  - {fileID: 21300000, guid: fcf76ecc0d44f7a4da81804399559ddb, type: 3}
-  - {fileID: 21300000, guid: fc1dd8f4bd13b6145917a33f028703e0, type: 3}
+  - {fileID: 21300000, guid: cf50904c63add2843a41ec887c05bb39, type: 3}
+  - {fileID: 21300000, guid: 08611263ab107d44eb7004996e95b5be, type: 3}
+  - {fileID: 21300000, guid: 776818ffe0ddbb1419261ea129cf7265, type: 3}
+  - {fileID: 21300000, guid: b176cc279d9707f4f8a12dd766bb9958, type: 3}
   noiseMin: 5
   noiseMax: 5
   cellSize: {x: 100, y: 100}
