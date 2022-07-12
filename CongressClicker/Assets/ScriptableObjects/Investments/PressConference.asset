@@ -37,11 +37,22 @@ MonoBehaviour:
     cost: 0
     description: 
     icon: {fileID: 0}
-  feedbackPanel_Background: {fileID: 21300000, guid: f15e5979712fc2e4a9046cb28d214e83, type: 3}
+  feedbackPanel_Background: {fileID: 21300000, guid: fcfb1aeeeefe3d349a7f0b3e07d7e0e3, type: 3}
   feedbackPanel_ObjectsToPopulate:
-  - {fileID: 21300000, guid: 593c8cc18c78a8340adbf679c8613d23, type: 3}
+  - {fileID: 21300000, guid: cc8b1f0f02cbdf7488872ddf49dca34a, type: 3}
+  - {fileID: 21300000, guid: ad153cc9fcc32d84bab4e955afd6b703, type: 3}
+  - {fileID: 21300000, guid: 7cb933c5cafa3f84ca9934f0ae408be0, type: 3}
+  - {fileID: 21300000, guid: 228feb8ac4d511246af98600b013707c, type: 3}
+  - {fileID: 21300000, guid: ebfd764bf79b4864b881a5a978a48d78, type: 3}
+  - {fileID: 21300000, guid: 2e58d03b580f4af4aaf542b00a5621ec, type: 3}
+  - {fileID: 21300000, guid: bdf2d81a90677f541876d1ef1ec4f285, type: 3}
+  - {fileID: 21300000, guid: acbaa85b3aa8d584db071ed96a616ee8, type: 3}
+  - {fileID: 21300000, guid: b19aee08fcab3124a947c76b1247d731, type: 3}
+  - {fileID: 21300000, guid: d6158f0cba909de47994d7ee7543b11a, type: 3}
+  - {fileID: 21300000, guid: 05b8953606b61af40b65ceffe768763e, type: 3}
+  - {fileID: 21300000, guid: 6d755377fb0f64948a3bb444da52d019, type: 3}
   noiseMin: 0
   noiseMax: 0
-  cellSize: {x: 100, y: 100}
+  cellSize: {x: 150, y: 200}
   offSet: {x: 0, y: -20}
   spawnType: 1
