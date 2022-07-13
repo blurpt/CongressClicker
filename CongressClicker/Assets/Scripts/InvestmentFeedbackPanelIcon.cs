@@ -13,7 +13,7 @@ public class InvestmentFeedbackPanelIcon : MonoBehaviour
         investment = Investment;
         icon.sprite = investment.GetIcon();
         icon.transform.position = offsetPosition(icon.transform);
-        icon.transform.position = icon.transform.position + AddNoise(investment.noiseMin, investment.noiseMax);
+       // icon.transform.position = icon.transform.position + AddNoise(investment.noiseMin, investment.noiseMax);
     }
 
     private Vector3 offsetPosition(Transform iconTransform)
