@@ -816,6 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseLeveling: 1
+  unlimitedVoters: 1
 --- !u!4 &273098881
 Transform:
   m_ObjectHideFlags: 0
@@ -2302,7 +2303,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1491363502}
   m_HandleRect: {fileID: 1491363501}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4903,7 +4904,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1094374972}
   m_HandleRect: {fileID: 1094374971}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
