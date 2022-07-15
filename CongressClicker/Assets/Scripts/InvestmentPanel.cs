@@ -5,56 +5,27 @@ using UnityEngine.UI;
 
 public class InvestmentPanel : MonoBehaviour
 {
-    public GridLayoutGroup columnContainer, rowContainer, singleRowContainer;
+    public HorizontalLayoutGroup rowContainer;
     public Image backgroundImage;
     public GameObject iconPrefab;
-    public ScrollRect scrollRect; 
+    public ScrollRect scrollRect;
+    public Scrollbar scrollbar;
     private Investment investment;
-    private RectTransform containerToSpawn;
-    private Vector2 startingPos;
 
-
-    public void Update()
-    {
-        if (!containerToSpawn && !investment) return; 
-
-        if(containerToSpawn.anchoredPosition.normalized != startingPos.normalized)
-        {
-            if (GetParentContainer(investment) == singleRowContainer)
-            {
-                containerToSpawn.anchoredPosition = containerToSpawn.anchoredPosition.normalized + investment.offSet.normalized;
-            }
-        }
-    }
 
     public void PopulateInvestmentPanel(Investment Investment)
     {
         investment = Investment;
         backgroundImage.sprite = investment.feedbackPanel_Background;
+        rowContainer.padding.top = (int)investment.offSet.y;
     }
 
     public void AddInvestment()
     {
-        GridLayoutGroup spawnLoaction = GetParentContainer(investment);
-        spawnLoaction.cellSize = investment.cellSize;
-        containerToSpawn = spawnLoaction.GetComponent<RectTransform>();
+        HorizontalLayoutGroup spawnLoaction = rowContainer;
+        spawnLoaction.spacing = investment.cellSize.x + 2;
         InvestmentFeedbackPanelIcon icon = Instantiate(iconPrefab, spawnLoaction.transform).GetComponent<InvestmentFeedbackPanelIcon>();
         icon.PopulateIcon(investment);
-        startingPos = containerToSpawn.anchoredPosition + investment.offSet;
     }
 
-    private GridLayoutGroup GetParentContainer(Investment investment)
-    {
-        switch (investment.spawnType)
-        {
-            case Investment.SpawnType.column:
-                return columnContainer;
-            case Investment.SpawnType.row:
-                return rowContainer;
-            case Investment.SpawnType.singleRow:
-                return singleRowContainer;
-        }
-        return columnContainer;
-
-    }
 }
