@@ -15,4 +15,9 @@ public class MerchUISelection : MonoBehaviour
         toggle.group = ToggleGroup;
         index = Index;
     }
+
+    public void SelectToggle(AudioClip audioClip)
+    {
+        SoundManager.Instance.PlayUISound(audioClip); 
+    }
 }

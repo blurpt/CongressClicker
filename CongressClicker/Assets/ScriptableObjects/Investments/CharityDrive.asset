@@ -42,8 +42,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3ceecebdec624094aacc78bd6d476cb3, type: 3}
   - {fileID: 21300000, guid: 828a6fc4d87e9f54086ce70c73985913, type: 3}
   - {fileID: 21300000, guid: ec601fc14d72e174c892ba4b07764f89, type: 3}
-  noiseMin: 5
-  noiseMax: 5
-  cellSize: {x: 200, y: 200}
-  offSet: {x: 0, y: -20}
+  cellSize: {x: 175, y: 200}
+  offSet: {x: 0, y: -10}
+  purchaseSound: {fileID: 8300000, guid: c8ce37c45386bdf40b9367f2568ef0bb, type: 3}
   spawnType: 2

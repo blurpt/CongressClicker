@@ -41,6 +41,7 @@ MonoBehaviour:
   feedbackPanel_ObjectsToPopulate:
   - {fileID: 21300000, guid: fcf76ecc0d44f7a4da81804399559ddb, type: 3}
   - {fileID: 21300000, guid: fc1dd8f4bd13b6145917a33f028703e0, type: 3}
-  cellSize: {x: 100, y: 100}
-  offSet: {x: 0, y: 10}
+  cellSize: {x: 200, y: 200}
+  offSet: {x: 0, y: -20}
+  purchaseSound: {fileID: 8300000, guid: ff8a5c60ea1105941ba22e3b4828a986, type: 3}
   spawnType: 1

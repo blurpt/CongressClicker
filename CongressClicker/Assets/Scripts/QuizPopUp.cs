@@ -9,6 +9,7 @@ public class QuizPopUp : MonoBehaviour
     public Transform popUp, answerParent, qustionMarkerParent, submitButton, closeButton, voterBonusParent, incorrectAnswerParent; 
     public GameObject answerPrefab, questionMarkerPrefab;
     public ToggleGroup answerToggleGroup;
+    public AudioClip correct, incorrect; 
     private string quizPassedText = "Debate Won!";
     private string quizFailedText = "Debate Lost...";
     private float requiredGrade;
@@ -27,6 +28,7 @@ public class QuizPopUp : MonoBehaviour
         if (answerToggleGroup.GetFirstActiveToggle().GetComponentInParent<AnswerLabel>().GetCorrectAnswer())
         {
             CorrectAnswer();
+            SoundManager.Instance.PlayUISound(correct);
             yield return new WaitForSeconds(2);
             NextQuestion();
 
@@ -34,6 +36,7 @@ public class QuizPopUp : MonoBehaviour
         else
         {
             IncorrectAnswer();
+            SoundManager.Instance.PlayUISound(incorrect);
             yield return new WaitForSeconds(2);
             incorrectAnswerParent.gameObject.SetActive(false);
         }

@@ -8,6 +8,7 @@ public class AnswerLabel : MonoBehaviour
 {
     public Text text;
     public Toggle toggle;
+    public AudioClip selected;
     private bool correctAnswer;
     public void Populate(string Text, ToggleGroup ToggleGroup, bool CorrectAnswer)
     {
@@ -16,6 +17,10 @@ public class AnswerLabel : MonoBehaviour
         correctAnswer = CorrectAnswer; 
     }
 
+    public void Select()
+    {
+        SoundManager.Instance.PlayUISound(selected);
+    }
     public bool GetCorrectAnswer()
     {
         return correctAnswer;

@@ -92,6 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 2227935223537750346}
   toggle: {fileID: 2227935225067526925}
+  selected: {fileID: 8300000, guid: 05b517e735c2cec4abd77c440b4c76ad, type: 3}
 --- !u!1 &2227935223537750344
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,5 +406,17 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6611392974252317738}
+        m_TargetAssemblyTypeName: AnswerLabel, Assembly-CSharp
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0

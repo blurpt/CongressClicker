@@ -7,6 +7,7 @@ public class UpgradeButton : MonoBehaviour
 {
     public Image image;
     public GameObject button;
+    public AudioClip purchaseSound;
     private UpgradeRequirement upgradeRequirment;
     private Investment investment; 
 
@@ -19,7 +20,7 @@ public class UpgradeButton : MonoBehaviour
     public void Destroy()
     {
         InvestmentsManager.Instance.AddPuchasedUpgradeID(upgradeRequirment.ID);
-        SoundManager.Instance.PlayPurchaseInvestmentSound();
+        SoundManager.Instance.PlayUISound(purchaseSound);
         Destroy(gameObject); 
     }
     public UpgradeRequirement GetUpgradeRequirment()

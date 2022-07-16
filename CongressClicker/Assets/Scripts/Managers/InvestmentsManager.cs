@@ -10,7 +10,7 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
     public MerchSet[] merch; 
     public GameObject investmentPrefab, upgradePrefab, investmentPanelPrefab;
     public Transform upgradeContainer, displayContainer;
-    public Scrollbar scrollbar;
+    public Scrollbar investmentButtonsScrollbar, investmentFeedbackScrollbar;
     private List<InvestmentButton> investmentButtons = new List<InvestmentButton>();
     private Dictionary<string, int> investmentQuantities = new Dictionary<string, int>();
     private Dictionary<int, UpgradeRequirement> InvestmentUpgradeRequirments = new Dictionary<int, UpgradeRequirement>();
@@ -61,7 +61,7 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
             investmentButtons.Add(button);
         }
 
-        scrollbar.value = 1;
+        investmentButtonsScrollbar.value = 1;
     }
 
     public void PopulateUpgradeRequirements()
@@ -105,12 +105,12 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
 
     public void UpdateInvestmentPanel(Investment investment)
     {
-        if(!InvestmentPanels.ContainsKey(investment))
+        if (!InvestmentPanels.ContainsKey(investment))
         {
             InvestmentPanel investmentPanel = Instantiate(investmentPanelPrefab, displayContainer).GetComponent<InvestmentPanel>();
             investmentPanel.PopulateInvestmentPanel(investment);
             InvestmentPanels.Add(investment, investmentPanel);
-            print("adding the thing");
+            investmentFeedbackScrollbar.numberOfSteps++;
         }
 
         InvestmentPanels[investment].AddInvestment(); 

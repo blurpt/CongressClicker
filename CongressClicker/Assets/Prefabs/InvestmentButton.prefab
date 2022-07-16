@@ -390,3 +390,4 @@ MonoBehaviour:
   displayName: {fileID: 1741151977641998924}
   quantity: {fileID: 8675705975411024747}
   cost: {fileID: 6893304470974041120}
+  cantPurchase: {fileID: 8300000, guid: af225af8073435b449746c67637d1837, type: 3}

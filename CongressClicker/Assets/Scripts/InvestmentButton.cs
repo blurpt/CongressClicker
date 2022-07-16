@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class InvestmentButton : MonoBehaviour
 {
     public Text displayName, quantity, cost;
+    public AudioClip cantPurchase; 
     private Investment investment;
     private float timer;
 
@@ -30,14 +31,18 @@ public class InvestmentButton : MonoBehaviour
 
     public void IncreaseInvestment()
     {
-        if (GameManager.Instance.CanPurchaseInvestment(InvestmentsManager.Instance.GetCurrentInvestmentCost(investment)) == false) return;
+        if (GameManager.Instance.CanPurchaseInvestment(InvestmentsManager.Instance.GetCurrentInvestmentCost(investment)) == false)
+        {
+            SoundManager.Instance.PlayUISound(cantPurchase);
+            return;
+        }
 
         GameManager.Instance.PurchaseInvestment(InvestmentsManager.Instance.GetCurrentInvestmentCost(investment));
         InvestmentsManager.Instance.IncreaseInvestment(investment);
         InvestmentsManager.Instance.UpdateInvestmentPanel(investment); 
         quantity.text = InvestmentsManager.Instance.GetInvestmentQuantity(investment).ToString();
         cost.text = InvestmentsManager.Instance.GetCurrentInvestmentCost(investment).ToString();
-        SoundManager.Instance.PlayPurchaseInvestmentSound(); 
+        SoundManager.Instance.PlayUISound(investment.purchaseSound); 
     }
 
     public Investment GetInvestment()
