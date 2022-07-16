@@ -816,6 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseLeveling: 1
+  unlimitedVoters: 1
 --- !u!4 &273098881
 Transform:
   m_ObjectHideFlags: 0

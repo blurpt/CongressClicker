@@ -15,7 +15,7 @@ public class Investment : ScriptableObject
     public UpgradeRequirement[] upgradeRequirements;
     public Sprite feedbackPanel_Background;
     public Sprite[] feedbackPanel_ObjectsToPopulate;
-    public int noiseMin, noiseMax;
+    //public int noiseMin, noiseMax;
     public Vector2 cellSize;
     public Vector2 offSet; 
     public enum SpawnType { column, row, singleRow };
