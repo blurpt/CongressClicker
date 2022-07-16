@@ -17,7 +17,6 @@ public class InvestmentPanel : MonoBehaviour
     {
         investment = Investment;
         backgroundImage.sprite = investment.feedbackPanel_Background;
-        rowContainer.padding.top = (int)investment.offSet.y;
     }
 
     public void AddInvestment()
