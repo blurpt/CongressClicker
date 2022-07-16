@@ -37,6 +37,7 @@ public class InvestmentButton : MonoBehaviour
         InvestmentsManager.Instance.UpdateInvestmentPanel(investment); 
         quantity.text = InvestmentsManager.Instance.GetInvestmentQuantity(investment).ToString();
         cost.text = InvestmentsManager.Instance.GetCurrentInvestmentCost(investment).ToString();
+        SoundManager.Instance.PlayPurchaseInvestmentSound(); 
     }
 
     public Investment GetInvestment()
@@ -59,5 +60,7 @@ public class InvestmentButton : MonoBehaviour
 
         return calculation; 
     }
+
+
 
 }

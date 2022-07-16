@@ -19,6 +19,7 @@ public class UpgradeButton : MonoBehaviour
     public void Destroy()
     {
         InvestmentsManager.Instance.AddPuchasedUpgradeID(upgradeRequirment.ID);
+        SoundManager.Instance.PlayPurchaseInvestmentSound();
         Destroy(gameObject); 
     }
     public UpgradeRequirement GetUpgradeRequirment()
