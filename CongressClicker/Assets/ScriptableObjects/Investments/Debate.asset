@@ -37,12 +37,13 @@ MonoBehaviour:
     cost: 0
     description: 
     icon: {fileID: 0}
-  feedbackPanel_Background: {fileID: 21300000, guid: f15e5979712fc2e4a9046cb28d214e83, type: 3}
+  feedbackPanel_Background: {fileID: 21300000, guid: 95f69f4811205e047b396a9505a225bd, type: 3}
   feedbackPanel_ObjectsToPopulate:
-  - {fileID: 21300000, guid: fcf76ecc0d44f7a4da81804399559ddb, type: 3}
-  - {fileID: 21300000, guid: fc1dd8f4bd13b6145917a33f028703e0, type: 3}
+  - {fileID: 21300000, guid: 68f516775ba4a6b46914ba3eadca5248, type: 3}
+  - {fileID: 21300000, guid: 484b5eb8fbd700c4da42eafa9b56fb00, type: 3}
+  - {fileID: 21300000, guid: a1e326f1ad6c92f429be907f02be780f, type: 3}
   noiseMin: 0
   noiseMax: 0
-  cellSize: {x: 350, y: 350}
+  cellSize: {x: 200, y: 200}
   offSet: {x: 0, y: -20}
   spawnType: 2

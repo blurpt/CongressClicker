@@ -43,5 +43,5 @@ MonoBehaviour:
   noiseMin: -50
   noiseMax: 50
   cellSize: {x: 200, y: 200}
-  offSet: {x: 30, y: 50}
+  offSet: {x: 0, y: 0}
   spawnType: 2
