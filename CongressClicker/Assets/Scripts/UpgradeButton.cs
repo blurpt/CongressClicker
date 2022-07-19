@@ -7,21 +7,31 @@ public class UpgradeButton : MonoBehaviour
 {
     public Image image;
     public GameObject button;
-    public AudioClip purchaseSound;
+    public Text price; 
+    public AudioClip purchaseSound, cantAfford;
     private UpgradeRequirement upgradeRequirment;
     private Investment investment; 
 
     public void Populate(UpgradeRequirement UpgradeRequirement, Investment Investment)
     {
         upgradeRequirment = UpgradeRequirement;
+        price.text = upgradeRequirment.cost.ToString();
         investment = Investment; 
     }
     
     public void Destroy()
     {
-        InvestmentsManager.Instance.AddPuchasedUpgradeID(upgradeRequirment.ID);
-        SoundManager.Instance.PlayUISound(purchaseSound);
-        Destroy(gameObject); 
+        if(upgradeRequirment.CanAfford(investment))
+        {
+            InvestmentsManager.Instance.AddPuchasedUpgradeID(upgradeRequirment.ID);
+            SoundManager.Instance.PlayUISound(purchaseSound);
+            Destroy(gameObject);
+        }
+        else
+        {
+            SoundManager.Instance.PlayUISound(cantAfford);
+        }
+
     }
     public UpgradeRequirement GetUpgradeRequirment()
     {
