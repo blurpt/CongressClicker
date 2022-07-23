@@ -34,7 +34,7 @@ public class UIManager : Singleton<UIManager>
 
     public void StartQuiz(PlayerLevel playerLevel)
     {
-        quizPopUp.Enable(playerLevel.quizQuestions, playerLevel.requiredQuizGrade); 
+        quizPopUp.Enable(playerLevel.quizQuestions, playerLevel.requiredQuizGrade, playerLevel.displayName); 
     }
 
     public void SetPromotionProgressBar(float progress)

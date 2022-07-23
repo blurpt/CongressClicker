@@ -391,8 +391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.54, y: -70}
-  m_SizeDelta: {x: 1393.845, y: 66.091}
+  m_AnchoredPosition: {x: 0.54, y: -51.523}
+  m_SizeDelta: {x: 1393.845, y: 103.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56259457
 MonoBehaviour:
@@ -415,19 +415,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_Font: {fileID: 12800000, guid: 87234a9d13698654bb0d237fbcff721c, type: 3}
+    m_FontSize: 55
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 92
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' Get these questions right to gain voters and earn a promotion!'
+  m_Text: ' Get questions right to earn a promotion!'
 --- !u!222 &56259458
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -708,7 +708,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -245, y: -0.0003415736}
-  m_SizeDelta: {x: 490, y: 0}
+  m_SizeDelta: {x: 490, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242084657
 MonoBehaviour:
@@ -1593,7 +1593,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -251, y: -0.000020455569}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 430, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442300841
 MonoBehaviour:
@@ -2246,8 +2246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.851, y: -0.0000011921}
-  m_SizeDelta: {x: 414.761, y: 46.186}
+  m_AnchoredPosition: {x: 30.95, y: -0.0000011921}
+  m_SizeDelta: {x: 398.96, y: 46.186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &568542983
 MonoBehaviour:
@@ -2271,18 +2271,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 31
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Correct! 10 Voters Gained!
+  m_Text: Correct! Voters Gained!
 --- !u!222 &568542984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2934,7 +2934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.028609738, g: 0.5754717, b: 0, a: 0.392}
+  m_Color: {r: 0.118436344, g: 0.4339623, b: 0.10030261, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3183,7 +3183,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -9.999994, y: 0.0000053089}
-  m_SizeDelta: {x: 560.38, y: 0}
+  m_SizeDelta: {x: 560.38, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &836239027
 MonoBehaviour:
@@ -5849,6 +5849,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2056647673}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayBackgroundMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1851729702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5945,7 +5957,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 87234a9d13698654bb0d237fbcff721c, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -6097,6 +6109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionText: {fileID: 1889679872}
   voterBonusText: {fileID: 568542983}
+  title: {fileID: 56259457}
   popUp: {fileID: 1766091114}
   answerParent: {fileID: 572738450}
   qustionMarkerParent: {fileID: 524612163}
@@ -6109,6 +6122,7 @@ MonoBehaviour:
   answerToggleGroup: {fileID: 572738455}
   correct: {fileID: 8300000, guid: d56f07c9aebd2ae4289ddf6fe7f712cb, type: 3}
   incorrect: {fileID: 8300000, guid: 44afd32bdbb91494f841988ccccb9987, type: 3}
+  levelUp: {fileID: 8300000, guid: 93a6adf3e39978d4a815466b882d979a, type: 3}
 --- !u!1 &1939377042
 GameObject:
   m_ObjectHideFlags: 0

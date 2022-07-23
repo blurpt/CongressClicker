@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class QuizPopUp : MonoBehaviour
 {
-    public Text questionText, voterBonusText;
+    public Text questionText, voterBonusText, title;
     public Transform popUp, answerParent, qustionMarkerParent, submitButton, closeButton, voterBonusParent, incorrectAnswerParent; 
     public GameObject answerPrefab, questionMarkerPrefab;
     public ToggleGroup answerToggleGroup;
     public AudioClip correct, incorrect, levelUp; 
-    private string quizPassedText = "Promoted!";
     private string quizFailedText = "Didn't get the job...";
+    private string levelName;
     private float requiredGrade;
     private int currentQuizQuestionIndex, correctAnswers;
-    private QuizQuestion[] questions; 
+    private QuizQuestion[] questions;
     
     public void SubmitAnswer()
     {
@@ -44,7 +44,7 @@ public class QuizPopUp : MonoBehaviour
 
     }
 
-    public void Enable(QuizQuestion[] quizQuestions, float RequiredGrade)
+    public void Enable(QuizQuestion[] quizQuestions, float RequiredGrade, string level)
     {
         questions = quizQuestions;
         requiredGrade = RequiredGrade; 
@@ -53,12 +53,13 @@ public class QuizPopUp : MonoBehaviour
         closeButton.gameObject.SetActive(false);
         PopulateQuestion(quizQuestions[currentQuizQuestionIndex]);
         popUp.transform.gameObject.SetActive(true);
+        levelName = level;
     }
 
     public void Disable()
     {
         popUp.transform.gameObject.SetActive(false);
-        GameManager.Instance.EndQuiz(questionText.text == quizPassedText);
+        GameManager.Instance.EndQuiz(true);
         Clear();
         submitButton.gameObject.SetActive(false);
         closeButton.gameObject.SetActive(false);
@@ -123,7 +124,8 @@ public class QuizPopUp : MonoBehaviour
 
         if(passed)
         {
-            questionText.text = quizPassedText;
+            title.text = "Congratulations!";
+            questionText.text = "Promoted to " + levelName + "!";
             SoundManager.Instance.PlayUISound(levelUp);
         }
         else
