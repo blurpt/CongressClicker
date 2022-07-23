@@ -9,9 +9,9 @@ public class QuizPopUp : MonoBehaviour
     public Transform popUp, answerParent, qustionMarkerParent, submitButton, closeButton, voterBonusParent, incorrectAnswerParent; 
     public GameObject answerPrefab, questionMarkerPrefab;
     public ToggleGroup answerToggleGroup;
-    public AudioClip correct, incorrect; 
-    private string quizPassedText = "Debate Won!";
-    private string quizFailedText = "Debate Lost...";
+    public AudioClip correct, incorrect, levelUp; 
+    private string quizPassedText = "Promoted!";
+    private string quizFailedText = "Didn't get the job...";
     private float requiredGrade;
     private int currentQuizQuestionIndex, correctAnswers;
     private QuizQuestion[] questions; 
@@ -118,18 +118,19 @@ public class QuizPopUp : MonoBehaviour
 
     private void QuizCompleted()
     {
-        print("Quiz Complete!");
         Clear();
         bool passed = (correctAnswers / questions.Length) >= requiredGrade; 
 
         if(passed)
         {
             questionText.text = quizPassedText;
+            SoundManager.Instance.PlayUISound(levelUp);
         }
         else
         {
             questionText.text = quizFailedText;
         }
+        SoundManager.Instance.StopMusic();
         submitButton.gameObject.SetActive(false);
         closeButton.gameObject.SetActive(true);
     }

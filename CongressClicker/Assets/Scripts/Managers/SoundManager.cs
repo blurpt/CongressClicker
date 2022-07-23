@@ -24,6 +24,9 @@ public class SoundManager : Singleton<SoundManager>
         musicSource.clip = quizMusic;
         musicSource.Play();
     }
-
+    public void StopMusic()
+    {
+        musicSource.Stop();
+    }
 
 }
