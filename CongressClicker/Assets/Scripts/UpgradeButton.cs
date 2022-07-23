@@ -16,7 +16,8 @@ public class UpgradeButton : MonoBehaviour
     {
         upgradeRequirment = UpgradeRequirement;
         price.text = upgradeRequirment.cost.ToString();
-        investment = Investment; 
+        investment = Investment;
+        image.sprite = upgradeRequirment.icon;
     }
     
     public void Destroy()

@@ -8,7 +8,7 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
 {
     public Investment[] investments;
     public MerchSet[] merch; 
-    public GameObject investmentPrefab, upgradePrefab, investmentPanelPrefab;
+    public GameObject investmentPrefab, upgradePrefab, investmentPanelPrefab, investmentInstructions, upgradeInstructions;
     public Transform upgradeContainer, displayContainer;
     public Scrollbar investmentButtonsScrollbar, investmentFeedbackScrollbar;
     private List<InvestmentButton> investmentButtons = new List<InvestmentButton>();
@@ -107,6 +107,7 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
     {
         if (!InvestmentPanels.ContainsKey(investment))
         {
+            investmentInstructions.SetActive(false);
             InvestmentPanel investmentPanel = Instantiate(investmentPanelPrefab, displayContainer).GetComponent<InvestmentPanel>();
             investmentPanel.PopulateInvestmentPanel(investment);
             InvestmentPanels.Add(investment, investmentPanel);
@@ -127,6 +128,7 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
                     UpgradeButton button = Instantiate(upgradePrefab, upgradeContainer).GetComponent<UpgradeButton>();
                     button.Populate(key.Value, UpgradeInvestment[key.Key]);
                     spawnedUpgradeIDs.Add(key.Key);
+                    upgradeInstructions.SetActive(false);
                 }
             }
         }
