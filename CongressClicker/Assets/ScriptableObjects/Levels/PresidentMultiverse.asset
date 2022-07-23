@@ -15,5 +15,32 @@ MonoBehaviour:
   displayName: 'President of the Multiverse '
   playerAvatar: {fileID: 0}
   voterRequirement: 1700
-  quizQuestions: []
+  quizQuestions:
+  - question: How many committees are a part of the Senate?
+    answers:
+    - 5
+    - 10
+    - 15
+    answerIndex: 0
+  - question: What is an example of a Senate Committee?
+    answers:
+    - Committee on Homeland Security and Governmental Affairs
+    - Committee of Dance Parties
+    - Committee of Toothpaste
+    - Committee of Bubble Tea
+    answerIndex: 0
+  - question: 
+    answers:
+    - 
+    - 
+    - 
+    - 
+    answerIndex: 0
+  - question: 
+    answers:
+    - 
+    - 
+    - 
+    - 
+    answerIndex: 0
   requiredQuizGrade: 1

@@ -42,5 +42,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 25924fbecae240849bdbd57739bb2d78, type: 3}
   cellSize: {x: 200, y: 200}
   offSet: {x: 0, y: -50}
-  purchaseSound: {fileID: 8300000, guid: 47768e90a0a401c49a54aded9fd497ee, type: 3}
+  purchaseSound: {fileID: 8300000, guid: 435e4527199a41744b5b7a61abd0381b, type: 3}
   spawnType: 2

@@ -37,4 +37,34 @@ MonoBehaviour:
     - 350
     - 250
     answerIndex: 0
+  - question: What was the third amendment of the Constitution say?
+    answers:
+    - No soldier can demand to be sheltered without the consent of the owner of the
+      house
+    - The people of the United States are allowed to eat ice cream at all times of
+      day
+    - People are allowed to follow their religion without government interference
+    - Women are allowed to vote
+    answerIndex: 0
+  - question: Who vetoes bills?
+    answers:
+    - The Vice President
+    - Speaker of the House
+    - The President
+    - The Senators
+    answerIndex: 2
+  - question: Who vetoes bills?
+    answers:
+    - The Vice President
+    - Speaker of the House
+    - The President
+    - The Senators
+    answerIndex: 0
+  - question: Who is the Commander in Chief of the military?
+    answers:
+    - The President
+    - The Vice President
+    - The Senators
+    - Speaker of the House
+    answerIndex: 0
   requiredQuizGrade: 1

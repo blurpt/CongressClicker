@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Blue
   m_EditorClassIdentifier: 
   portriatIcon: {fileID: 21300000, guid: 556278a146bc3de44aaf6d667ca4bf7d, type: 3}
-  investmentIcon: {fileID: 21300000, guid: fcd744ad563f98e4080a0a8559031a5d, type: 3}
+  investmentIcon: {fileID: 21300000, guid: 96d69a612a6375944a8e45caf8c29459, type: 3}

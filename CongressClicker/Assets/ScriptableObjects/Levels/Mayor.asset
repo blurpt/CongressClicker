@@ -21,11 +21,32 @@ MonoBehaviour:
     - Groups of people with the same political beliefs
     - DANCE PARTY at the White House!!!!!!
     answerIndex: 0
-  - question: What age can you register to vote?
+  - question: What age can you REGISTER to vote?
     answers:
-    - 16
-    - 17
+    - 16/17
     - 18
     - 19
+    - 20
+    answerIndex: 1
+  - question: What is the job of the Constitution?
+    answers:
+    - Tells the White House chefs the best recipes for the president
+    - It lists the powers of the federal government
+    - Lists who should be the next president
+    - Says the rules for White house dodge ball
+    answerIndex: 1
+  - question: ' What are the first three words of the constitution? '
+    answers:
+    - Me, myself, I
+    - We the people
+    - I love cupcakes
+    - One, two, three
+    answerIndex: 1
+  - question: What is an amendment?
+    answers:
+    - A way to fix a skirt
+    - A law in the Constitution that has always been there
+    - 'A change in the Constitution '
+    - An imperfection in the constitution
     answerIndex: 1
   requiredQuizGrade: 1

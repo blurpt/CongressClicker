@@ -15,5 +15,18 @@ MonoBehaviour:
   displayName: 'President of North America '
   playerAvatar: {fileID: 0}
   voterRequirement: 1300
-  quizQuestions: []
+  quizQuestions:
+  - question: What month do we vote for the President?
+    answers:
+    - July
+    - August
+    - October
+    - November
+    answerIndex: 3
+  - question: How long is a Senator's term?
+    answers:
+    - 3 years
+    - 4 years
+    - 5 years
+    answerIndex: 4
   requiredQuizGrade: 1

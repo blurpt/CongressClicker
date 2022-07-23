@@ -21,6 +21,18 @@ MonoBehaviour:
     - Zebras and dinosaurs
     - Ice Cream and Cake
     - Democrats and Republicans
-    - Poland Spring and Smart Water
+    answerIndex: 2
+  - question: What is the definition of "naturalization"?
+    answers:
+    - Something to do with plants
+    - A legal process by which a person is granted citizenship
+    - I way to become a plant
+    - The way plants grow
+    answerIndex: 2
+  - question: What is a legislature?
+    answers:
+    - The principle that a ruler or a government is all powerful
+    - 'The nickname for buddies in the legislative branch '
+    - A group of people who make laws
     answerIndex: 2
   requiredQuizGrade: 1

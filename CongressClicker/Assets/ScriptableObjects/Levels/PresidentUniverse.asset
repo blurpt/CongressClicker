@@ -15,5 +15,26 @@ MonoBehaviour:
   displayName: President of the Universe
   playerAvatar: {fileID: 0}
   voterRequirement: 1500
-  quizQuestions: []
+  quizQuestions:
+  - question: How long is a Senator's term for?
+    answers:
+    - 1 year
+    - 2 years
+    - 4 years
+    - 6 years
+    answerIndex: 3
+  - question: How long is a Senator's term for?
+    answers:
+    - 1 year
+    - 2 years
+    - 4 years
+    - 6 years
+    answerIndex: 3
+  - question: Which parts of the federal government write the laws?
+    answers:
+    - The President's Cabinet
+    - Congress
+    - The Vice President
+    - The President's Pet Dog
+    answerIndex: 1
   requiredQuizGrade: 1

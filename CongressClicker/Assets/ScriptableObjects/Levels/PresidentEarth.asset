@@ -21,4 +21,18 @@ MonoBehaviour:
     - Left wing= liberal beliefs, right wing= conservative beliefs
     - Certain types of birds
     answerIndex: 0
+  - question: What civic duty is required of the U.S. citizens?
+    answers:
+    - Try a mango
+    - To serve on a jury
+    - Play an instrument
+    - Play a sport
+    answerIndex: 0
+  - question: Who becomes president if the president can no longer serve?
+    answers:
+    - You! Great job!
+    - The speaker of the house
+    - A senator
+    - The Vice President
+    answerIndex: 0
   requiredQuizGrade: 1
