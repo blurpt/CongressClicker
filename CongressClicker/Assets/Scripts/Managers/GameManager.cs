@@ -34,6 +34,7 @@ public class GameManager : Singleton<GameManager>
         PlayerManager.Instance.Initialize();
         UIManager.Instance.SetPlayerLevelUI(PlayerManager.Instance.GetCurrentPlayerLevel());
         UIManager.Instance.UpdateVoterCount(voterCurrency);
+        SoundManager.Instance.PlayBackgroundMusic();
     }
     private void Update()
     {

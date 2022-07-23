@@ -45,6 +45,7 @@ public class PlayerManager : Singleton<PlayerManager>
         if (GameManager.Instance.GetTotalVoters() >= GetNextLevel().voterRequirement)
         {
             GameManager.Instance.StartQuiz(GetNextLevel());
+            SoundManager.Instance.PlayQuizMusic();
         }
 
     }

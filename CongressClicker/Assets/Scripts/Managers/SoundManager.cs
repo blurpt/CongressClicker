@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    public AudioSource audioSourceUI;
-    public AudioClip purchaseInvestmentSound;
+    public AudioSource audioSourceUI, musicSource;
+    public AudioClip backgroundMusic, quizMusic;
     public void PlayUISound(AudioClip clip)
     {
         audioSourceUI.PlayOneShot(clip); 
     }
 
-    public void PlayPurchaseInvestmentSound()
+    public void PlayBackgroundMusic()
     {
-        SoundManager.Instance.PlayUISound(purchaseInvestmentSound);
+        musicSource.Stop();
+        musicSource.clip = backgroundMusic;
+        musicSource.Play();
     }
+
+    public void PlayQuizMusic()
+    {
+        musicSource.Stop();
+        musicSource.clip = quizMusic;
+        musicSource.Play();
+    }
+
+
 }
