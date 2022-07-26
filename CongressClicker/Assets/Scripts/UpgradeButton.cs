@@ -44,4 +44,14 @@ public class UpgradeButton : MonoBehaviour
     {
         return investment;
     }
+
+    public void UpdateUpgradeInfo()
+    {
+        UIManager.Instance.UpdateUpgradeInfo(investment);
+    }
+
+    public void ClearUpgradeInfo()
+    {
+        UIManager.Instance.ClearUpgradeInfo(); 
+    }
 }

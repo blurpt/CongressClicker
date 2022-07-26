@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
-    public Text voterLable, levelLable;
+    public Text voterLable, levelLable, upgradeInfo;
     public Transform investmentContainer;
     public QuizPopUp quizPopUp;
     public MerchPopUp merchPopUp;
@@ -52,6 +52,16 @@ public class UIManager : Singleton<UIManager>
     {
         megaphoneInstructions.SetActive(false);
         megaphoneGlow.SetActive(false);
+    }
+
+    public void UpdateUpgradeInfo(Investment investment)
+    {
+        upgradeInfo.text = "Double voters earned from " + investment.displayName + "!"; 
+    }
+
+    public void ClearUpgradeInfo()
+    {
+        upgradeInfo.text = ""; 
     }
 
     private string GetVotersLableText(int voters)
