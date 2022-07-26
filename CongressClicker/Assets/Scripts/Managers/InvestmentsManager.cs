@@ -15,7 +15,7 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
     private Dictionary<string, int> investmentQuantities = new Dictionary<string, int>();
     private Dictionary<int, UpgradeRequirement> InvestmentUpgradeRequirments = new Dictionary<int, UpgradeRequirement>();
     private Dictionary<int, Investment> UpgradeInvestment = new Dictionary<int, Investment>();
-    private Dictionary<Investment, InvestmentPanel> InvestmentPanels = new Dictionary<Investment, InvestmentPanel>();
+    public Dictionary<Investment, InvestmentPanel> InvestmentPanels = new Dictionary<Investment, InvestmentPanel>();
     private Dictionary<int, MerchSet> merchSets = new Dictionary<int, MerchSet>();
 
     private List<int> purchasedUpgradeIDs = new List<int>();
@@ -103,7 +103,7 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
         investmentQuantities[investment.displayName]++;
     }
 
-    public void UpdateInvestmentPanel(Investment investment)
+    public void AddInvestmentToPanel(Investment investment)
     {
         if (!InvestmentPanels.ContainsKey(investment))
         {

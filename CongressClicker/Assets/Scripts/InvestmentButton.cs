@@ -39,7 +39,7 @@ public class InvestmentButton : MonoBehaviour
 
         GameManager.Instance.PurchaseInvestment(InvestmentsManager.Instance.GetCurrentInvestmentCost(investment));
         InvestmentsManager.Instance.IncreaseInvestment(investment);
-        InvestmentsManager.Instance.UpdateInvestmentPanel(investment); 
+        InvestmentsManager.Instance.AddInvestmentToPanel(investment); 
         quantity.text = InvestmentsManager.Instance.GetInvestmentQuantity(investment).ToString();
         cost.text = InvestmentsManager.Instance.GetCurrentInvestmentCost(investment).ToString();
         SoundManager.Instance.PlayUISound(investment.purchaseSound); 

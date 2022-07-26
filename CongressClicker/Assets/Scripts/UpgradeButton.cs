@@ -26,6 +26,7 @@ public class UpgradeButton : MonoBehaviour
         {
             InvestmentsManager.Instance.AddPuchasedUpgradeID(upgradeRequirment.ID);
             SoundManager.Instance.PlayUISound(purchaseSound);
+            InvestmentsManager.Instance.InvestmentPanels[investment].voterIncomeText.text = InvestmentsManager.Instance.InvestmentPanels[investment].VoterIncome(investment);
             Destroy(gameObject);
         }
         else

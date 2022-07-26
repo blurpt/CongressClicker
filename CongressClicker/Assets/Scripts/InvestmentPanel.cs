@@ -29,9 +29,13 @@ public class InvestmentPanel : MonoBehaviour
         voterIncomeText.text = VoterIncome(investment);
     }
 
-    private string VoterIncome(Investment investment)
+    public string VoterIncome(Investment investment)
     {
         int voters = investment.votesPerCache * InvestmentsManager.Instance.GetInvestmentQuantity(investment);
+        for (int i = 0; i < InvestmentsManager.Instance.InvestmentUpgradesAquired(investment); i++)
+        {
+            voters = voters * 2;
+        }
         return voters.ToString() + " Voters every " + investment.secondsToCache + " seconds";
     }
 
