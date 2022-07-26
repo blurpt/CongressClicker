@@ -11,6 +11,7 @@ public class UIManager : Singleton<UIManager>
     public MerchPopUp merchPopUp;
     public Slider promotionProgressBar;
     public Image portrait;
+    public GameObject megaphoneInstructions, megaphoneGlow, investmentInstructions, upgradeInstructions;
 
 
     public void UpdateVoterCount(int num)
@@ -45,6 +46,12 @@ public class UIManager : Singleton<UIManager>
     public void UpdatePortrait(Sprite icon)
     {
         portrait.sprite = icon; 
+    }
+
+    public void TurnOffMegaphoneInstructions()
+    {
+        megaphoneInstructions.SetActive(false);
+        megaphoneGlow.SetActive(false);
     }
 
     private string GetVotersLableText(int voters)
