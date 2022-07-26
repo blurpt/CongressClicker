@@ -10,6 +10,7 @@ public class InvestmentPanel : MonoBehaviour
     public GameObject iconPrefab;
     public ScrollRect scrollRect;
     public Scrollbar scrollbar;
+    public Text voterIncomeText;
     private Investment investment;
 
 
@@ -25,6 +26,13 @@ public class InvestmentPanel : MonoBehaviour
         spawnLoaction.spacing = investment.cellSize.x + 2;
         InvestmentFeedbackPanelIcon icon = Instantiate(iconPrefab, spawnLoaction.transform).GetComponent<InvestmentFeedbackPanelIcon>();
         icon.PopulateIcon(investment);
+        voterIncomeText.text = VoterIncome(investment);
+    }
+
+    private string VoterIncome(Investment investment)
+    {
+        int voters = investment.votesPerCache * InvestmentsManager.Instance.GetInvestmentQuantity(investment);
+        return voters.ToString() + " Voters every " + investment.secondsToCache + " seconds";
     }
 
 }
