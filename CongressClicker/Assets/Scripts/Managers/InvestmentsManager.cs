@@ -8,15 +8,18 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
 {
     public Investment[] investments;
     public MerchSet[] merch; 
-    public GameObject investmentPrefab, upgradePrefab, investmentPanelPrefab;
+    public GameObject investmentPrefab, upgradePrefab, investmentPanelPrefab, scrollbarCover;
     public Transform upgradeContainer, displayContainer;
     public Scrollbar investmentButtonsScrollbar, investmentFeedbackScrollbar;
     private List<InvestmentButton> investmentButtons = new List<InvestmentButton>();
+    public List<InvestmentPanel> investmentPanelList = new List<InvestmentPanel>();
     private Dictionary<string, int> investmentQuantities = new Dictionary<string, int>();
     private Dictionary<int, UpgradeRequirement> InvestmentUpgradeRequirments = new Dictionary<int, UpgradeRequirement>();
     private Dictionary<int, Investment> UpgradeInvestment = new Dictionary<int, Investment>();
     public Dictionary<Investment, InvestmentPanel> InvestmentPanels = new Dictionary<Investment, InvestmentPanel>();
     private Dictionary<int, MerchSet> merchSets = new Dictionary<int, MerchSet>();
+    private Dictionary<Investment, float> ScrollBarMap = new Dictionary<Investment, float>();
+
 
     private List<int> purchasedUpgradeIDs = new List<int>();
     private List<int> spawnedUpgradeIDs = new List<int>();
@@ -51,7 +54,16 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
         return x; 
     }
 
-    public void SpawnInvestments(Transform container)
+    public void PopulateInvestmentPanels(Transform container)
+    {
+        foreach (Investment investment in investments)
+        {
+            InvestmentPanel investmentPanel = Instantiate(investmentPanelPrefab, displayContainer).GetComponent<InvestmentPanel>();
+            investmentPanelList.Add(investmentPanel);
+        }
+    }
+
+    public void PopulateInvestmentButtons(Transform container)
     {
         foreach (Investment investment in investments)
         {
@@ -60,8 +72,6 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
             investmentQuantities.Add(investment.displayName, 0);
             investmentButtons.Add(button);
         }
-
-        investmentButtonsScrollbar.value = 1;
     }
 
     public void PopulateUpgradeRequirements()
@@ -105,15 +115,20 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
 
     public void AddInvestmentToPanel(Investment investment)
     {
-        if (!InvestmentPanels.ContainsKey(investment))
+        if(!InvestmentPanels.ContainsKey(investment))
         {
-            UIManager.Instance.investmentInstructions.SetActive(false);
-            InvestmentPanel investmentPanel = Instantiate(investmentPanelPrefab, displayContainer).GetComponent<InvestmentPanel>();
-            investmentPanel.PopulateInvestmentPanel(investment);
-            InvestmentPanels.Add(investment, investmentPanel);
-            investmentFeedbackScrollbar.numberOfSteps++;
+            investmentPanelList[0].PopulateInvestmentPanel(investment);
+            InvestmentPanels.Add(investment, investmentPanelList[0]);
+            SetScrollBarMap(investment, InvestmentPanels.Count);
+            investmentPanelList.RemoveAt(0);
+
+            if(InvestmentPanels.Count > 2)
+            {
+                scrollbarCover.SetActive(false);
+            }
         }
 
+        UIManager.Instance.investmentInstructions.SetActive(false);
         InvestmentPanels[investment].AddInvestment(); 
     }
 
@@ -137,6 +152,39 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
     public void AddPuchasedUpgradeID(int ID)
     {
         purchasedUpgradeIDs.Add(ID);
+    }
+
+    private void SetScrollBarMap(Investment investment, int index)
+    {
+        switch(index)
+        {
+            case 1:
+                ScrollBarMap.Add(investment, 1);
+                break;
+            case 2:
+                ScrollBarMap.Add(investment, 1);
+                break;
+            case 3:
+                ScrollBarMap.Add(investment, .75f);
+                break;
+            case 4:
+                ScrollBarMap.Add(investment, .5f);
+                break;
+            case 5:
+                ScrollBarMap.Add(investment, .25f);
+                break;
+            case 6:
+                ScrollBarMap.Add(investment, 0);
+                break;
+            case 7:
+                ScrollBarMap.Add(investment, 0);
+                break;
+        }
+    }
+
+    public void FocusInvestment(Investment investment)
+    {
+        investmentFeedbackScrollbar.value = ScrollBarMap[investment];
     }
 
 }

@@ -42,7 +42,8 @@ public class InvestmentButton : MonoBehaviour
         InvestmentsManager.Instance.AddInvestmentToPanel(investment); 
         quantity.text = InvestmentsManager.Instance.GetInvestmentQuantity(investment).ToString();
         cost.text = InvestmentsManager.Instance.GetCurrentInvestmentCost(investment).ToString();
-        SoundManager.Instance.PlayUISound(investment.purchaseSound); 
+        SoundManager.Instance.PlayUISound(investment.purchaseSound);
+        InvestmentsManager.Instance.FocusInvestment(investment);
     }
 
     public Investment GetInvestment()

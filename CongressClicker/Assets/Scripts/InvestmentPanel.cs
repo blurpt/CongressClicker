@@ -7,7 +7,7 @@ public class InvestmentPanel : MonoBehaviour
 {
     public HorizontalLayoutGroup rowContainer;
     public Image backgroundImage;
-    public GameObject iconPrefab;
+    public GameObject iconPrefab, cover;
     public ScrollRect scrollRect;
     public Scrollbar scrollbar;
     public Text voterIncomeText;
@@ -16,6 +16,7 @@ public class InvestmentPanel : MonoBehaviour
 
     public void PopulateInvestmentPanel(Investment Investment)
     {
+        cover.SetActive(false);
         investment = Investment;
         backgroundImage.sprite = investment.feedbackPanel_Background;
     }

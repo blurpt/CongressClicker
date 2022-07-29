@@ -18,11 +18,6 @@ public class UIManager : Singleton<UIManager>
     {
         voterLable.text = GetVotersLableText(num); 
     }
-    public void PopulateInvestments()
-    {
-        InvestmentsManager.Instance.SpawnInvestments(investmentContainer);
-    }
-
     public void PopulateMerch()
     {
         merchPopUp.Populate();

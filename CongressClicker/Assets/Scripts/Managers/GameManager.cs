@@ -28,7 +28,8 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        UIManager.Instance.PopulateInvestments();
+        InvestmentsManager.Instance.PopulateInvestmentPanels(InvestmentsManager.Instance.displayContainer);
+        InvestmentsManager.Instance.PopulateInvestmentButtons(UIManager.Instance.investmentContainer);
         InvestmentsManager.Instance.PopulateUpgradeRequirements();
         InvestmentsManager.Instance.PopulateMerchSelection();
         PlayerManager.Instance.Initialize();
@@ -105,6 +106,7 @@ public class GameManager : Singleton<GameManager>
     {
         yield return null;
         InvestmentsManager.Instance.investmentButtonsScrollbar.value = 1;
+        InvestmentsManager.Instance.investmentFeedbackScrollbar.value = 1;
     }
 
 
