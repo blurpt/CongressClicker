@@ -35,6 +35,7 @@ public class GameManager : Singleton<GameManager>
         UIManager.Instance.SetPlayerLevelUI(PlayerManager.Instance.GetCurrentPlayerLevel());
         UIManager.Instance.UpdateVoterCount(voterCurrency);
         SoundManager.Instance.PlayBackgroundMusic();
+        StartCoroutine(SetScrollBarPostion());
     }
     private void Update()
     {
@@ -100,7 +101,11 @@ public class GameManager : Singleton<GameManager>
 
     }
 
-
+    private IEnumerator SetScrollBarPostion()
+    {
+        yield return null;
+        InvestmentsManager.Instance.investmentButtonsScrollbar.value = 1;
+    }
 
 
 }
