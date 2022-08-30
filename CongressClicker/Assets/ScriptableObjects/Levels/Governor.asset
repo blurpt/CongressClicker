@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Governor
   playerAvatar: {fileID: 0}
-  voterRequirement: 300
+  voterRequirement: 500
   quizQuestions:
   - question: 'What are the two main parties in the United Sates?  '
     answers:
@@ -28,7 +28,7 @@ MonoBehaviour:
     - A legal process by which a person is granted citizenship
     - I way to become a plant
     - The way plants grow
-    answerIndex: 2
+    answerIndex: 1
   - question: What is a legislature?
     answers:
     - The principle that a ruler or a government is all powerful

@@ -898,8 +898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570cc413e86901b4e81189aa9130f366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseLeveling: 1
-  unlimitedVoters: 1
+  pauseLeveling: 0
+  unlimitedVoters: 0
 --- !u!4 &273098881
 Transform:
   m_ObjectHideFlags: 0

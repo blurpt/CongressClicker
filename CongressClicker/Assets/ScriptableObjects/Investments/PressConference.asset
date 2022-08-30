@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PressConference
   m_EditorClassIdentifier: 
   displayName: Press Conference
-  unlockLevel: 2
-  startingCost: 1
-  votesPerCache: 50
+  unlockLevel: 7
+  startingCost: 900
+  votesPerCache: 3000
   secondsToCache: 100
   buttonIcon: {fileID: 0}
   upgradeRequirements:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: President of the Universe
   playerAvatar: {fileID: 0}
-  voterRequirement: 1500
+  voterRequirement: 2000
   quizQuestions:
   - question: How long is a Senator's term for?
     answers:

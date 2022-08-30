@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Merch
   m_EditorClassIdentifier: 
   displayName: Merch
-  unlockLevel: 1
-  startingCost: 1
-  votesPerCache: 5
-  secondsToCache: 10000
+  unlockLevel: 2
+  startingCost: 100
+  votesPerCache: 10
+  secondsToCache: 10
   buttonIcon: {fileID: 0}
   upgradeRequirements:
   - displayName: 

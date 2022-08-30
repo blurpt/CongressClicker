@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: President of the Earth
   playerAvatar: {fileID: 0}
-  voterRequirement: 0
+  voterRequirement: 7000
   quizQuestions:
   - question: What does it mean to be "left wing" or "right wing"?
     answers:

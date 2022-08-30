@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Mayor
   playerAvatar: {fileID: 0}
-  voterRequirement: 150
+  voterRequirement: 100
   quizQuestions:
   - question: What are political parties?
     answers:
@@ -27,7 +27,7 @@ MonoBehaviour:
     - 18
     - 19
     - 20
-    answerIndex: 1
+    answerIndex: 0
   - question: What is the job of the Constitution?
     answers:
     - Tells the White House chefs the best recipes for the president
@@ -48,5 +48,5 @@ MonoBehaviour:
     - A law in the Constitution that has always been there
     - 'A change in the Constitution '
     - An imperfection in the constitution
-    answerIndex: 1
+    answerIndex: 2
   requiredQuizGrade: 1

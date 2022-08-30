@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: CelebrityEndorsement
   m_EditorClassIdentifier: 
   displayName: Celebrity Endorsement
-  unlockLevel: 3
-  startingCost: 1
-  votesPerCache: 500
-  secondsToCache: 1
+  unlockLevel: 8
+  startingCost: 15000
+  votesPerCache: 5000
+  secondsToCache: 30
   buttonIcon: {fileID: 0}
   upgradeRequirements:
   - displayName: 

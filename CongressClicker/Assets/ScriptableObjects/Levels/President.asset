@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: President
   playerAvatar: {fileID: 0}
-  voterRequirement: 1100
+  voterRequirement: 3000
   quizQuestions:
   - question: How many branches of government are there?
     answers:
@@ -53,13 +53,6 @@ MonoBehaviour:
     - The President
     - The Senators
     answerIndex: 2
-  - question: Who vetoes bills?
-    answers:
-    - The Vice President
-    - Speaker of the House
-    - The President
-    - The Senators
-    answerIndex: 0
   - question: Who is the Commander in Chief of the military?
     answers:
     - The President

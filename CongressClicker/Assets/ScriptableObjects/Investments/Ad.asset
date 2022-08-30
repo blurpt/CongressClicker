@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Ad
   unlockLevel: 1
-  startingCost: 1
+  startingCost: 25
   votesPerCache: 2
-  secondsToCache: 10
+  secondsToCache: 5
   buttonIcon: {fileID: 0}
   upgradeRequirements:
   - displayName: 
@@ -24,19 +24,19 @@ MonoBehaviour:
     quantityRequirement: 10
     cost: 0
     description: 
-    icon: {fileID: 21300000, guid: e1869bd34b37698469e590fb6415e17a, type: 3}
+    icon: {fileID: 21300000, guid: 7673092bd620de343b298e563159e9ae, type: 3}
   - displayName: 
     ID: 111
     quantityRequirement: 50
     cost: 0
     description: 
-    icon: {fileID: 21300000, guid: fc1dd8f4bd13b6145917a33f028703e0, type: 3}
+    icon: {fileID: 21300000, guid: 7673092bd620de343b298e563159e9ae, type: 3}
   - displayName: 
     ID: 112
     quantityRequirement: 100
     cost: 0
     description: 
-    icon: {fileID: 21300000, guid: e1869bd34b37698469e590fb6415e17a, type: 3}
+    icon: {fileID: 21300000, guid: 7673092bd620de343b298e563159e9ae, type: 3}
   feedbackPanel_Background: {fileID: 21300000, guid: 3ceb54a32cbe0e84a84b69218cc8b872, type: 3}
   feedbackPanel_ObjectsToPopulate:
   - {fileID: 21300000, guid: 25924fbecae240849bdbd57739bb2d78, type: 3}

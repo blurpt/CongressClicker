@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: CharityDrive
   m_EditorClassIdentifier: 
   displayName: Charity Drive
-  unlockLevel: 4
-  startingCost: 1
-  votesPerCache: 1
-  secondsToCache: 100
+  unlockLevel: 3
+  startingCost: 150
+  votesPerCache: 20
+  secondsToCache: 60
   buttonIcon: {fileID: 0}
   upgradeRequirements:
   - displayName: 

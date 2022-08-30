@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Debate
   m_EditorClassIdentifier: 
   displayName: Debate
-  unlockLevel: 3
-  startingCost: 1
-  votesPerCache: 3000
-  secondsToCache: 1
+  unlockLevel: 5
+  startingCost: 500
+  votesPerCache: 1000
+  secondsToCache: 80
   buttonIcon: {fileID: 0}
   upgradeRequirements:
   - displayName: 

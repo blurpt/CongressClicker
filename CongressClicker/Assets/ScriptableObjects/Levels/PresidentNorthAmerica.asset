@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: 'President of North America '
   playerAvatar: {fileID: 0}
-  voterRequirement: 1300
+  voterRequirement: 4000
   quizQuestions:
   - question: What month do we vote for the President?
     answers:
@@ -28,5 +28,18 @@ MonoBehaviour:
     - 3 years
     - 4 years
     - 5 years
-    answerIndex: 4
+    answerIndex: 1
+  - question: What is jury duty?
+    answers:
+    - A civic duty that requires citizens to sit on a jury in court if the government
+      calls them to
+    - A law that requires one to become a judge for court
+    answerIndex: 0
+  - question: ' Who wrote the Bill of Rights and when was it added to the Constitution?'
+    answers:
+    - Alexander Hamilton
+    - James Madison
+    - George Washington
+    - Thomas Jefferson
+    answerIndex: 1
   requiredQuizGrade: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Congressmen
   playerAvatar: {fileID: 0}
-  voterRequirement: 500
+  voterRequirement: 1000
   quizQuestions:
   - question: How many people make up the House of Representatives?
     answers:

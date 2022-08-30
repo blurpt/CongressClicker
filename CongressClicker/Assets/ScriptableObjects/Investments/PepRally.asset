@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PepRally
   m_EditorClassIdentifier: 
   displayName: Pep Rally
-  unlockLevel: 1
-  startingCost: 1
-  votesPerCache: 10
-  secondsToCache: 2.5
+  unlockLevel: 6
+  startingCost: 750
+  votesPerCache: 1000
+  secondsToCache: 90
   buttonIcon: {fileID: 0}
   upgradeRequirements:
   - displayName: 
