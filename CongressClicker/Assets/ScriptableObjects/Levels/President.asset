@@ -30,7 +30,7 @@ MonoBehaviour:
     - Republic
     - Monarchy
     answerIndex: 0
-  - question: How many Electoral College points do you need to win the presidency?
+  - question: How many presidential electors do one need to win the presidency?
     answers:
     - 270
     - 300

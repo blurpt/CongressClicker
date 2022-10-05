@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: 'President of North America '
   playerAvatar: {fileID: 0}
-  voterRequirement: 150000
+  voterRequirement: 25000
   quizQuestions:
   - question: What month do we vote for the President?
     answers:
@@ -36,7 +36,7 @@ MonoBehaviour:
       calls them to
     - A law that requires one to become a judge for court
     answerIndex: 0
-  - question: ' Who wrote the Bill of Rights and when was it added to the Constitution?'
+  - question: ' Who wrote the Bill of Rights?'
     answers:
     - Alexander Hamilton
     - James Madison

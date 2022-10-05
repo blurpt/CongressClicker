@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6955f31d5a209e9439dca291941e99a9, type: 3}
   m_Name: Representative
   m_EditorClassIdentifier: 
-  displayName: Congressmen
+  displayName: 'Representative '
   playerAvatar: {fileID: 0}
   voterRequirement: 5000
   quizQuestions:
@@ -30,7 +30,7 @@ MonoBehaviour:
     - Weather
     - Cats per state
     answerIndex: 1
-  - question: How many amendments are there?
+  - question: How many amendments to the U.S. Constitution are there?
     answers:
     - 15
     - 17

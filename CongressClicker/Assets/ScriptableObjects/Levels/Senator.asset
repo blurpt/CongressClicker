@@ -38,11 +38,11 @@ MonoBehaviour:
     - 15
     - 20
     answerIndex: 3
-  - question: 'What is an example of a Senate Committee?  '
+  - question: What amendment gave women the right to vote?
     answers:
-    - 'Committee of Homeland Security and Governmental Affairs  '
-    - Committee of Dance Parties
-    - Committee of Toothpaste
-    - Committee of Bubble Tea
-    answerIndex: 0
+    - 10th
+    - 17th
+    - 19th
+    - 21st
+    answerIndex: 2
   requiredQuizGrade: 1

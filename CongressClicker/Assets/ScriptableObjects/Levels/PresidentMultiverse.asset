@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: 'President of the Multiverse '
   playerAvatar: {fileID: 0}
-  voterRequirement: 100000
+  voterRequirement: 150000
   quizQuestions:
   - question: How many committees are a part of the Senate?
     answers:
@@ -30,7 +30,7 @@ MonoBehaviour:
     - Committee of Toothpaste
     - Committee of Bubble Tea
     answerIndex: 0
-  - question: Which of the following is a civic duty?
+  - question: Which of the following is a mandatory civic duty?
     answers:
     - Voting
     - 'Community Involvement '
