@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: 'President of the Multiverse '
   playerAvatar: {fileID: 0}
-  voterRequirement: 10000
+  voterRequirement: 100000
   quizQuestions:
   - question: How many committees are a part of the Senate?
     answers:
     - 5
     - 10
     - 15
-    answerIndex: 0
+    - 20
+    answerIndex: 3
   - question: What is an example of a Senate Committee?
     answers:
     - Committee on Homeland Security and Governmental Affairs

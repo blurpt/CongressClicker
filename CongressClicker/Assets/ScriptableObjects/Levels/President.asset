@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: President
   playerAvatar: {fileID: 0}
-  voterRequirement: 3000
+  voterRequirement: 35000
   quizQuestions:
   - question: How many branches of government are there?
     answers:

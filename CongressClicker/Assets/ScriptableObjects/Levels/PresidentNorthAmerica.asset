@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: 'President of North America '
   playerAvatar: {fileID: 0}
-  voterRequirement: 4000
+  voterRequirement: 150000
   quizQuestions:
   - question: What month do we vote for the President?
     answers:
@@ -28,7 +28,8 @@ MonoBehaviour:
     - 3 years
     - 4 years
     - 5 years
-    answerIndex: 1
+    - 6 years
+    answerIndex: 3
   - question: What is jury duty?
     answers:
     - A civic duty that requires citizens to sit on a jury in court if the government

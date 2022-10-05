@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Senator
   playerAvatar: {fileID: 0}
-  voterRequirement: 2000
+  voterRequirement: 30000
   quizQuestions:
   - question: How many senators does each state have?
     answers:

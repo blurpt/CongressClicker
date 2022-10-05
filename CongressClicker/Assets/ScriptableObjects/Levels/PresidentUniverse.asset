@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: President of the Universe
   playerAvatar: {fileID: 0}
-  voterRequirement: 2000
+  voterRequirement: 100000
   quizQuestions:
   - question: How long is a Senator's term for?
     answers:
@@ -23,13 +23,13 @@ MonoBehaviour:
     - 4 years
     - 6 years
     answerIndex: 3
-  - question: How long is a Senator's term for?
+  - question: What two groups make up Congress?
     answers:
-    - 1 year
-    - 2 years
-    - 4 years
-    - 6 years
-    answerIndex: 3
+    - President and Senate
+    - Senate and House of Reps.
+    - House of Reps. and Vice President
+    - Speaker of the House and Senate
+    answerIndex: 1
   - question: Which parts of the federal government write the laws?
     answers:
     - The President's Cabinet

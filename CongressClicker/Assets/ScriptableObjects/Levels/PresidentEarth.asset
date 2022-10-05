@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: President of the Earth
   playerAvatar: {fileID: 0}
-  voterRequirement: 7000
+  voterRequirement: 80000
   quizQuestions:
   - question: What does it mean to be "left wing" or "right wing"?
     answers:
@@ -27,12 +27,12 @@ MonoBehaviour:
     - To serve on a jury
     - Play an instrument
     - Play a sport
-    answerIndex: 0
+    answerIndex: 1
   - question: Who becomes president if the president can no longer serve?
     answers:
     - You! Great job!
     - The speaker of the house
     - A senator
     - The Vice President
-    answerIndex: 0
+    answerIndex: 3
   requiredQuizGrade: 1

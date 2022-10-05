@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Debate
   unlockLevel: 5
-  startingCost: 500
-  votesPerCache: 1000
-  secondsToCache: 80
+  startingCost: 2000
+  votesPerCache: 150
+  secondsToCache: 1
   buttonIcon: {fileID: 0}
   upgradeRequirements:
   - displayName: 

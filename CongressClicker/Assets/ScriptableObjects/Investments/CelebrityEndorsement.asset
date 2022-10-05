@@ -15,7 +15,7 @@ MonoBehaviour:
   displayName: Celebrity Endorsement
   unlockLevel: 8
   startingCost: 15000
-  votesPerCache: 5000
+  votesPerCache: 1500
   secondsToCache: 30
   buttonIcon: {fileID: 0}
   upgradeRequirements:

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Pep Rally
   unlockLevel: 6
-  startingCost: 750
-  votesPerCache: 1000
-  secondsToCache: 90
+  startingCost: 15000
+  votesPerCache: 500
+  secondsToCache: 1
   buttonIcon: {fileID: 0}
   upgradeRequirements:
   - displayName: 
