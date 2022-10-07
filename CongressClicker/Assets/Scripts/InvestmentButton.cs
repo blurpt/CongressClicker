@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class InvestmentButton : MonoBehaviour
 {
     public Text displayName, quantity, cost;
-    public AudioClip cantPurchase; 
+    public AudioClip cantPurchase;
+    public Button button;
     private Investment investment;
     private float timer;
 
@@ -20,6 +21,19 @@ public class InvestmentButton : MonoBehaviour
             timer = investment.secondsToCache; 
         }
     }
+
+    public void SetButtonInteractive()
+    {
+        if (GameManager.Instance.CanPurchaseInvestment(InvestmentsManager.Instance.GetCurrentInvestmentCost(investment)) == false)
+        {
+            button.interactable = false;
+        }
+        else
+        {
+            button.interactable = true;
+        }
+    }
+
     public void Populate(string DisplayName, int Quantity, Investment Investment)
     {
         displayName.text = DisplayName;

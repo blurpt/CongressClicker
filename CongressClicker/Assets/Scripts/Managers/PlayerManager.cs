@@ -66,6 +66,12 @@ public class PlayerManager : Singleton<PlayerManager>
         return merchIndex; 
     }
 
+    public bool IsMaxLevel()
+    {
+        Debug.Log(currentLevel + " | " + maxLevel);
+        return currentLevel == maxLevel;
+    }
+
     private PlayerLevel GetNextLevel()
     {
         if (currentLevel == maxLevel) return maxLevel;

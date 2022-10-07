@@ -54,6 +54,8 @@ public class QuizPopUp : MonoBehaviour
         PopulateQuestion(quizQuestions[currentQuizQuestionIndex]);
         popUp.transform.gameObject.SetActive(true);
         levelName = level;
+        title.text = "Get questions right to earn a promotion!";
+
     }
 
     public void Disable()
@@ -135,5 +137,12 @@ public class QuizPopUp : MonoBehaviour
         SoundManager.Instance.StopMusic();
         submitButton.gameObject.SetActive(false);
         closeButton.gameObject.SetActive(true);
+        PlayerManager.Instance.Promote();
+        
+        if (PlayerManager.Instance.IsMaxLevel())
+        {
+            title.text = "YOU WON!";
+            questionText.text = "Congratulations! You have earned your final promotion! " + levelName + "! You have reached the highest position in the galaxy! You can continue to earn more voters, or take a break and enjoy your new found powers.";
+        }
     }
 }

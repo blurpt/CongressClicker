@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public bool pauseLeveling, unlimitedVoters;
+    public bool pauseLeveling, unlimitedVoters, cheats;
     private int voterCurrency, totalVoters;
     private float timer;
     private bool paused; 
@@ -45,6 +45,7 @@ public class GameManager : Singleton<GameManager>
         foreach(InvestmentButton button in InvestmentsManager.Instance.GetInvestmentButtons())
         {
             button.CacheTimer();
+            button.SetButtonInteractive();
         }
 
         UIManager.Instance.SetPromotionProgressBar(PlayerManager.Instance.PromotionProgressPercent());
@@ -58,6 +59,11 @@ public class GameManager : Singleton<GameManager>
             {
                 PlayerManager.Instance.CheckForLevelUp();
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.A) && cheats)
+        {
+            AddVoters(10000000);
         }
     }
 
@@ -90,7 +96,6 @@ public class GameManager : Singleton<GameManager>
         {
             totalVoters += voterPercent;
             voterCurrency += voterPercent;
-            PlayerManager.Instance.Promote(); 
         }
         else
         {

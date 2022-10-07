@@ -27,12 +27,16 @@ public class InvestmentsManager : Singleton<InvestmentsManager>
 
     public int GetInvestmentQuantity(Investment investment)
     {
+        if(investmentQuantities.ContainsKey(investment.displayName) == false)
+        {
+            return 0;
+        }
         return investmentQuantities[investment.displayName]; 
     }
 
     public int GetCurrentInvestmentCost(Investment investment)
     {
-        return Mathf.RoundToInt(investment.startingCost + ((investment.startingCost * InvestmentsManager.Instance.GetInvestmentQuantity(investment)) * .25f));
+        return Mathf.RoundToInt(investment.startingCost + ((investment.startingCost * GetInvestmentQuantity(investment)) * .25f));
     }
 
     public List<InvestmentButton> GetInvestmentButtons()
